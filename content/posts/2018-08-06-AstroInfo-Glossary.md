@@ -17,7 +17,9 @@ title: Astroinformatics Glossary
 
 # Glossary
 
+<center>
 <img src="https://imgs.xkcd.com/comics/period_speech.png" style="float: 0px 0px 10px 15px;">
+</center>
 
 ## Dithering
 

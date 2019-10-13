@@ -5,7 +5,7 @@ author: "Tarek Allam"
 date: 2016-11-12
 category: tutorials
 tags: [reproducibility, programming]
-cover: /media/posts/2016-11-12-Matlab-R-Julia-Notebooks/jupyternotebooks.png
+cover: img/posts/2016-11-12-Matlab-R-Julia-Notebooks/jupyternotebooks.png
 ---
 
 *Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
@@ -13,8 +13,7 @@ notebooks. Also discussed are some of the gotchas I encountered along the way.*
 
 <!--more-->
 
-<img src="/blog/media/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png"
-style="float: right;margin: 0px 0px 15px 20px;">
+{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
 
 Jupyter notebooks are an amazing way of keeping track of programming pipelines
 and for learning concepts through programming. It is also a great way to
@@ -107,7 +106,7 @@ corner. Alternatively, from the command line, one can simply run:
 jupyter console --kernel matlab
 ```
 
-<img src="/blog/media/posts/2016-11-12-Matlab-R-Julia-Notebooks/matlabkernel.png">
+{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/matlabkernel.png">}}
 <div class="figcaption">MATLAB kernel</div>
 
 # <a name="r"></a>R

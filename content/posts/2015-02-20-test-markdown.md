@@ -12,14 +12,14 @@ You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll w
 ## Here is a secondary heading
 
 Here's a useless table:
- 
+
 | Number | Next number | Previous number |
 | :------ |:--- | :--- |
 | Five | Six | Four |
 | Ten | Eleven | Nine |
 | Seven | Eight | Six |
 | Two | Three | One |
- 
+
 
 How about a yummy crepe?
 
@@ -27,9 +27,11 @@ How about a yummy crepe?
 
 Here's a code chunk with syntax highlighting:
 
-```javascript
+{{< highlight javascript >}}
+
 var foo = function(x) {
   return(x + 5);
 }
 foo(3)
-```
+
+{{< / highlight >}}

@@ -5,7 +5,7 @@ author: "Tarek Allam"
 date: 2016-08-15
 category: tutorials
 tags: [programming, deep-learning]
-cover:  /media/Python-Programming-Language-Art.jpg
+cover:  /img/posts/2016-08-15-Programatically-define-net-with-PyCaffe/Python-Programming-Language-Art.jpg
 ---
 
 *Discussed here is an overview of the PyCaffe interface and how it can be used

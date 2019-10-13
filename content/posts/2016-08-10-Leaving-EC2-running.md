@@ -5,13 +5,14 @@ author: "Tarek Allam"
 date: 2016-08-10
 category: tutorials
 tags: [programming, unix, cloud]
-cover: /media/posts/2016-08-10-Leaving-EC2-running/screen-unix.png
 ---
 
 *This is a brief overview of the `screen` command with applications to Caffe and
 AWS.*
 
 <!--more-->
+
+{{< figure src="/img/posts/2016-08-10-Leaving-EC2-running/screen-unix.png" class="alignright">}}
 
 Training convolutional neural nets can take time, a lot of time, which is fine
 until you want to close your laptop for whatever reason, or you have to get a
