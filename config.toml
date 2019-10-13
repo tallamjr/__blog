@@ -18,6 +18,8 @@ paginate = 5
   centerTheme = true
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
+  math = true
+  enableEmoji = true
 
 [languages]
   [languages.en]
