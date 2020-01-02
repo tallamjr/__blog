@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Multilingual Notebooks: A Polyglot's Playground"
-author: "Tarek Allam"
+author: "Tarek Allam Jr"
 date: 2016-11-12
 category: tutorials
 tags: [reproducibility, programming]
@@ -198,7 +198,7 @@ IRkernel::installspec(user = FALSE)
 When this is linked you should be off and away and read to use **R** in Jupyter
 notebooks.
 
-<img src="/blog/media/posts/2016-11-12-Matlab-R-Julia-Notebooks/rkernel.png">
+{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/rkernel.png">}}
 <div class="figcaption">R kernel</div>
 
 # <a name="julia"></a>Julia
@@ -238,7 +238,7 @@ conda remove pyzmq
 pip install pyzmq
 ```
 
-<img src="/blog/media/posts/2016-11-12-Matlab-R-Julia-Notebooks/juliakernel.png">
+{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/juliakernel.png">}}
 <div class="figcaption">Julia kernel</div>
 
 ## Final Comments.

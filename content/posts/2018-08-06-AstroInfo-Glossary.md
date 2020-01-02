@@ -9,6 +9,7 @@ tags:
 - unix
 - cloud
 title: Astroinformatics Glossary
+draft: true
 ---
 
 *Astroinformatics Jargon Explained*

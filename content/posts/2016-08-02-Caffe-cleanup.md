@@ -1,11 +1,10 @@
 ---
-layout: post
 title: "Caffe cleanup: The UNIX way"
 author: "Tarek Allam"
 date: 2016-08-02
+draft: true
 category: tutorials
 tags: [programming, unix]
-cover: /media/posts/2016-08-02-Caffe-cleanup/ex-command.png
 ---
 
 *This post gives a run through of the steps taken to clean the Caffe output for

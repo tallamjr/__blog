@@ -2,7 +2,6 @@
 author: Tarek Allam
 categories:
 - tutorials
-image: images/posts/2017-10-27-Dark-Energy-Overview/universe.jpg
 date: "2017-10-27T00:00:00Z"
 tags:
 - programming
@@ -16,6 +15,9 @@ draft: true
 
 <!--more-->
 
-
 # Dark Energy Overview
 
+
+<center>
+<img src="/img/posts/2017-10-27-Dark-Energy-Overview/universe.jpg" style="float: 0px 0px 10px 15px;">
+</center>

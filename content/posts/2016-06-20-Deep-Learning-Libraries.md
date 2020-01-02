@@ -5,7 +5,7 @@ author: "Tarek Allam"
 date: 2016-06-22
 category: tutorials
 tags: [programming, deep-learning, computing]
-cover: /media/posts/2016-06-20-Deep-Learning-Libraries/deep.jpg
+draft: true
 ---
 
 

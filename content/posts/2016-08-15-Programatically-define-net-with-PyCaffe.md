@@ -2,6 +2,7 @@
 layout: post
 title: "Programatically define nets with PyCaffe"
 author: "Tarek Allam"
+draft: true
 date: 2016-08-15
 category: tutorials
 tags: [programming, deep-learning]

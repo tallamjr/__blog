@@ -2,6 +2,7 @@
 title: Code Sample
 subtitle: Using Hugo or Pygments
 date: 2016-03-08
+draft: true
 tags: ["example", "code"]
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Installing Caffe in the cloud"
 author: "Tarek Allam"
+draft: true
 date: 2016-07-22
 category: tutorials
 tags: [programming, cloud, deep-learning]
@@ -13,7 +14,7 @@ up and running on an AWS instance.*
 
 <!--more-->
 
-**Note, this post may be considered observe since Amazon Web Services have
+**Note, this post may be considered obsolete since Amazon Web Services have
 recently realised an instance called
 [p2](https://aws.amazon.com/blogs/aws/new-p2-instance-type-for-amazon-ec2-up-to-16-gpus/)
 which is specifically designed for

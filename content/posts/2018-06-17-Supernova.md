@@ -3,6 +3,7 @@ author: Tarek Allam
 categories:
 - tutorials
 image: images/posts/2018-06-17-Supernova/supernova_science.jpg
+draft: true
 date: "2018-06-16T00:00:00Z"
 tags:
 - programming

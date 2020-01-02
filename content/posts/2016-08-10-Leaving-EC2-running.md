@@ -2,6 +2,7 @@
 layout: post
 title: "Leaving EC2 Running"
 author: "Tarek Allam"
+draft: true
 date: 2016-08-10
 category: tutorials
 tags: [programming, unix, cloud]

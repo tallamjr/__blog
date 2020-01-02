@@ -2,7 +2,6 @@
 author: Tarek Allam
 categories:
 - tutorials
-image: images/posts/2017-10-31-Machine-Learning-Overview/ml.png
 date: "2017-10-31T00:00:00Z"
 tags:
 - programming
