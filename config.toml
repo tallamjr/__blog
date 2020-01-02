@@ -1,7 +1,9 @@
 baseurl = "/"
-languageCode = "en-us"
+languageCode = "en-gb"
 theme = "terminal"
 paginate = 5
+
+PygmentsCodeFences = true
 
 [params]
   # dir name of your blog content (default is `content/posts`)
@@ -9,7 +11,7 @@ paginate = 5
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "orange"
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 5
   # show selector to switch language
   showLanguageSelector = false
   # set theme to full screen width
@@ -20,6 +22,7 @@ paginate = 5
   # favicon = "favicon.ico"
   math = true
   enableEmoji = true
+
 
 [languages]
   [languages.en]
@@ -42,6 +45,10 @@ paginate = 5
         name = "About"
         url = "/about"
       [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+        identifier = "contact"
+        name = "Contact"
+        url = "/contact"
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/"
