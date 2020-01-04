@@ -36,7 +36,7 @@ PygmentsCodeFences = true
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "The Astroinformaticist"
+      logoText = "The AstroInformatic"
       logoHomeLink = "/"
 
     [languages.en.menu]
