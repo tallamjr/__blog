@@ -38,7 +38,6 @@ PygmentsCodeFences = true
 
     [languages.en.params.logo]
       logoText = "The AstroInformatic"
-      logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
