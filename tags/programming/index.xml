@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Tarek&#39;s Tech Blog</title>
+    <link>http://www.tarekallamjr.com/tags/programming/</link>
+    <description>Recent content in programming on Tarek&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 12 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.tarekallamjr.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Multilingual Notebooks: A Polyglot&#39;s Playground</title>
+      <link>http://www.tarekallamjr.com/posts/2016-11-12-matlab-r-julia-notebooks/</link>
+      <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.tarekallamjr.com/posts/2016-11-12-matlab-r-julia-notebooks/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
+notebooks. Also discussed are some of the gotchas I encountered along the way.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
