@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/</loc>
+    <lastmod>2016-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/posts/</loc>
+    <lastmod>2016-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/tags/programming/</loc>
+    <lastmod>2016-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/tags/reproducibility/</loc>
+    <lastmod>2016-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/tags/</loc>
+    <lastmod>2016-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/</loc>
+    <lastmod>2016-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.tarekallamjr.com/blog/contact/</loc>
+  </url>
+  
+</urlset>

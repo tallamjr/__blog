@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tarek&#39;s Tech Blog</title>
+    <link>http://www.tarekallamjr.com/blog/</link>
+    <description>Recent content on Tarek&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 12 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.tarekallamjr.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Multilingual Notebooks: A Polyglot&#39;s Playground</title>
+      <link>http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/</link>
+      <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
+notebooks. Also discussed are some of the gotchas I encountered along the way.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://www.tarekallamjr.com/blog/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.tarekallamjr.com/blog/about/</guid>
+      <description>About Me My name is Tarek Allam Jr,
+I am a third year PhD student at the Centre for Data Intensive Science at University College London (UCL). My research focus is on development of online algorithms for real time classification of Astrophysical transient events.
+As part of my PhD I completed an internship at the Alan Turing Institute, where I contributed to an exciting project which investigated machine learning methods that could be applied to the domain of Air Traffic Control to help with effective decision making.</description>
+    </item>
+    
+    <item>
+      <title>Contact Me</title>
+      <link>http://www.tarekallamjr.com/blog/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.tarekallamjr.com/blog/contact/</guid>
+      <description>If you would like to contact me about my research or my interests, feel free to contact me via Gmail, Linkedin, Github or Twitter via my online handle: @tallamjr
+ .fa { padding: 20px; font-size: 30px; width: 50px; text-align: center; text-decoration: none; } .fa:hover { opacity: 0.7; } .fa-google { background: #DB4437; color: white; } .fa-github { background: #000000; color: white; } .fa-linkedin { background: #2867B2; color: white; } .</description>
+    </item>
+    
+  </channel>
+</rss>
