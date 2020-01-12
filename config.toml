@@ -1,6 +1,7 @@
 baseurl = "/"
 languageCode = "en-gb"
 theme = "terminal"
+publishDir = "public"
 paginate = 5
 
 PygmentsCodeFences = true
