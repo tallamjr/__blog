@@ -1,4 +1,4 @@
-baseurl = "http://www.tarekallamjr.com"
+baseurl = "http://www.tarekallamjr.com/blog"
 languageCode = "en-gb"
 theme = "terminal"
 publishDir = "public"
