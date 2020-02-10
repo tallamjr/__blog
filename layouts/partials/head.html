@@ -13,7 +13,9 @@
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
 {{ if (fileExists "static/style.css") -}}
-    <script> console.log("HERERE"); </script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script> -->
+    <script src="{{ "assets/highlight.pack.js" | absURL }}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 {{- end }}
 
