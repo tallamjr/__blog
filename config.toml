@@ -3,6 +3,7 @@ languageCode = "en-gb"
 theme = "terminal"
 publishDir = "public"
 paginate = 5
+summaryLength = 50
 
 PygmentsCodeFences = true
 
@@ -28,7 +29,7 @@ PygmentsCodeFences = true
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Tarek's Tech Blog"
+    title = "The AstroInformatic"
     subtitle = "A simple, retro theme for Hugo"
     keywords = ""
     copyright = ""
