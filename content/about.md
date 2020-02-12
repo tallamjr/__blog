@@ -5,8 +5,7 @@ comments: false
 
 # About Me
 
-<img src="http://www.tarekallamjr.com/blog/img/profile-pic-smile-square-crop.jpg"
-style="float: right;margin: 0px 0px 10px 15px;">
+<img src="http://www.tarekallamjr.com/blog/img/profile-pic-smile-square-crop.jpg" style="float: right;margin: 0px 0px 10px 15px;">
 
 My name is Tarek Allam Jr,
 
@@ -33,8 +32,7 @@ passion for Computer Vision which comes from my masters studies in Computer Scie
 
 # About The Blog
 
-<img src=" https://imgs.xkcd.com/comics/blogging.png"
-style="float: right;margin: 0px 0px 10px 15px;">
+<img src="https://imgs.xkcd.com/comics/blogging.png" style="float: right;margin: 0px 0px 10px 15px;">
 
 This blog is intended to be more of a series of ramblings than a coherent
 chronological account of technology I use or find interesting.
