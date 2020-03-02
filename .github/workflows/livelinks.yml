@@ -29,13 +29,15 @@ jobs:
             # Brew install hugo
             brew install hugo
             # Build site
-            echo ${PWD}
-            hugo serve &
+            echo "PWD: ${PWD}"
+            ls -la
             # Add GOPATH to PATH
             export PATH=$PATH:$(go env GOPATH)/bin
             export GOPATH=$(go env GOPATH)
             which go
             # Install muffet link checker
+            echo "GET MUFFET"
             go get -u github.com/raviqqe/muffet
+            hugo serve &
             # Run link checker
             muffet --verbose http://localhost:1313/blog/
