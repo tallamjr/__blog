@@ -22,13 +22,13 @@ jobs:
           with:
             go-version: '1.11'
         - run: |
-            # Install muffet link checker
-            go get -u github.com/raviqqe/muffet
             # Install Homebrew
-            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
             # Brew install hugo
             brew install hugo
             # Build site
             hugo serve &
+            # Install muffet link checker
+            go get -u github.com/raviqqe/muffet
             # Run link checker
             muffet --verbose http://localhost:1313/blog/
