@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - master
-      - issue/1/sbt-pkg
   pull_request:
     branches:
       - master
