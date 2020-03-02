@@ -1,0 +1,34 @@
+name: HyperLinks
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+      - issue/1/sbt-pkg
+  pull_request:
+    branches:
+      - master
+
+jobs:
+    build:
+        name: Check live links
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@master
+        - uses: actions/setup-go@v1
+          with:
+            go-version: '1.11'
+        - run: |
+            # Install muffet link checker
+            go get -u github.com/raviqqe/muffet
+            # Install Homebrew
+            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            # Brew install hugo
+            brew install hugo
+            # Build site
+            hugo serve &
+            # Run link checker
+            muffet --verbose http://localhost:1313/blog/
