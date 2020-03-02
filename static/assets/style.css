@@ -631,11 +631,11 @@ hr {
 }
 
 .post-cover {
-    border: 20px solid #ffa86a;
-    border: 20px solid var(--accent);
+    border: 5px solid #ffa86a;
+    border: 5px solid var(--accent);
     background: transparent;
-    margin: 40px 0;
-    padding: 20px
+    margin: 20px 0;
+    padding: 10px
 }
 
 @media (max-width:683px) {
