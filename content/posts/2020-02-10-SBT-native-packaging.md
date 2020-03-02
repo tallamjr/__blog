@@ -13,7 +13,7 @@ would be nice if one could extend this to native system binaries that can be run
 walk through the steps of getting SBT-Native-Packager to create a native binary as well as a docker
 image that can run my 'Hello World' application.
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
+{{< figure src="http://www.tarekallamjr.com/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
 
 - [Scala and SBT Introduction](#scala)
 - [SBT-Native-Packager](#native)
