@@ -22,9 +22,6 @@ image that can run my 'Hello World' application.
 ```python
 print(f"Numpy: {np.__version__}")
 ```
-
-Say if I said something here
-
 ```bash
 $ echo "Hello World!"
 ```
