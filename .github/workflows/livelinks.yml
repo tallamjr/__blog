@@ -42,4 +42,4 @@ jobs:
             echo $?
             hugo serve &
             # Run link checker
-            muffet --verbose http://localhost:1313/blog/
+            muffet --verbose http://127.0.0.1:1313/blog/
