@@ -6,10 +6,10 @@ on:
   push:
     branches:
       - master
+      - issue/2/actions
   pull_request:
     branches:
       - master
-      - issue/2/actions
 
 jobs:
     build:
