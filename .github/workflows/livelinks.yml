@@ -30,6 +30,7 @@ jobs:
             # Build site
             echo "PWD: ${PWD}"
             ls -la
+            cat /etc/hosts
             # Add GOPATH to PATH
             export PATH=$PATH:$(go env GOPATH)/bin
             export GOPATH=$(go env GOPATH)
@@ -37,6 +38,7 @@ jobs:
             # Install muffet link checker
             echo "GET MUFFET"
             go get -u github.com/raviqqe/muffet
+            echo $?
             hugo serve &
             # Run link checker
             muffet --verbose http://localhost:1313/blog/
