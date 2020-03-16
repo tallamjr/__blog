@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>Multilingual Notebooks: A Polyglot&#39;s Playground :: Tarek&#39;s Tech Blog — A simple, retro theme for Hugo</title>
+    <title>Multilingual Notebooks: A Polyglot&#39;s Playground :: The AstroInformatic — A simple, retro theme for Hugo</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -18,6 +18,9 @@
 
 
 
+    <script src="http://www.tarekallamjr.com/blog/assets/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="http://www.tarekallamjr.com/blog/style.css">
 
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.tarekallamjr.com/blog/img/apple-touch-icon-144-precomposed.png">
@@ -27,22 +30,22 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Multilingual Notebooks: A Polyglot&#39;s Playground :: Tarek&#39;s Tech Blog — A simple, retro theme for Hugo" />
+<meta name="twitter:title" content="Multilingual Notebooks: A Polyglot&#39;s Playground :: The AstroInformatic — A simple, retro theme for Hugo" />
 <meta name="twitter:description" content="Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter notebooks. Also discussed are some of the gotchas I encountered along the way.
 " />
 <meta name="twitter:site" content="http://www.tarekallamjr.com/blog" />
 <meta name="twitter:creator" content="Tarek Allam Jr" />
-<meta name="twitter:image" content="http://www.tarekallamjr.com/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/jupyternotebooks.png">
+<meta name="twitter:image" content="">
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Multilingual Notebooks: A Polyglot&#39;s Playground :: Tarek&#39;s Tech Blog — A simple, retro theme for Hugo">
+<meta property="og:title" content="Multilingual Notebooks: A Polyglot&#39;s Playground :: The AstroInformatic — A simple, retro theme for Hugo">
 <meta property="og:description" content="Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter notebooks. Also discussed are some of the gotchas I encountered along the way.
 " />
 <meta property="og:url" content="http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/" />
 <meta property="og:site_name" content="Multilingual Notebooks: A Polyglot&#39;s Playground" />
-<meta property="og:image" content="http://www.tarekallamjr.com/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/jupyternotebooks.png">
+<meta property="og:image" content="">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -62,10 +65,9 @@
 <body class="">
 
 
-<div class="container center">
+<div class="container center headings--one-size">
 
   <header class="header">
-    <link rel="stylesheet" type="text/css" href="assets/syntax.css">
     <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   MathJax.Hub.Config({
@@ -158,7 +160,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/">Multilingual Notebooks: A Polyglot&rsquo;s Playground</a></h1>
+    <a href="http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/">Multilingual Notebooks: A Polyglot's Playground</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -183,24 +185,14 @@
   
 
   
-  <img src="http://www.tarekallamjr.com/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/jupyternotebooks.png" class="post-cover" />
-  
 
-  <div class="post-content">
-    <p><em>Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
+  <div class="post-content"><div>
+        <p><em>Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
 notebooks. Also discussed are some of the gotchas I encountered along the way.</em></p>
-
-  <figure class="left" >
-    <img src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png"   />
-    
-  </figure>
-
-
-
+<!-- raw HTML omitted -->
 <p>Jupyter notebooks are an amazing way of keeping track of programming pipelines
 and for learning concepts through programming. It is also a great way to
 recall how you may have done something before, or solved a problem previously.</p>
-
 <p>I have been using Jupyter notebooks (<em>previously know as the IPython notebook</em>)
 for a while but only for use with Python 2.7 programming language. Following a
 brilliant Coursera course on <a href="https://www.coursera.org/learn/julia-programming/">Julia Scientific Programming</a>,
@@ -208,15 +200,12 @@ I discovered that there has been a push to make these notebooks agnostic to
 language. There are several kernels available at the moment for a multitude of languages
 including Julia, R, Ruby and so on, a full list of which can be found <a href="https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages">here</a>.
 This post will talk though the steps involved to install the MATLAB, R and Julia kernels.</p>
-
 <ul>
 <li><a href="#matlab">MATLAB</a></li>
 <li><a href="#r">R</a></li>
 <li><a href="#julia">Julia</a></li>
 </ul>
-
-<h1 id="a-name-matlab-a-matlab"><a name="matlab"></a>MATLAB</h1>
-
+<h1 id="a-namematlabamatlab"><!-- raw HTML omitted --><!-- raw HTML omitted -->MATLAB<a href="#a-namematlabamatlab" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>MATLAB (matrix laboratory) is ubiquitous in the world of scientific computing and is a many
 engineering and physics students only connection to programming. The brilliant
 abstraction away from the low-level implementation of <a href="https://en.wikipedia.org/wiki/LAPACK">LAPACK</a> under the hood with
@@ -224,7 +213,6 @@ a nice high level interface make MATLAB a very powerful and useful tool. Combine
 that with the Jupyter notebook and we now have a way of expressing complex
 mathematical concepts and doing compute numerical methods in an easy to read
 manner.</p>
-
 <p>To get started one needs to have MATLAB installed on their local machine. MATLAB
 is propriety software from the mathworks company but if you are affiliated with a
 university a license should be easy to come by. After the binary is installed,
@@ -234,42 +222,40 @@ can be found
 The system requirements for these installs can be found <a href="http://uk.mathworks.com/help/matlab/matlab_external/system-requirements-for-matlab-engine-for-python.html">here</a>,
 however, on the system requirement website, it states Python 3.5 is supported,
 but I found this not to be the case (<em>14-11-2016</em>) as I encountered the following error under a 3.5 environment:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-less" data-lang="less">OSError: MATLAB Engine for Python supports Python version 2.7, 3.3 and 3.4, \
-but your version of Python is 3.5</code></pre></div>
-<p>Therefore, it was decided to create a new environment to play it safe under
+<pre><code class="language-less" data-lang="less">OSError: MATLAB Engine for Python supports Python version 2.7, 3.3 and 3.4, \
+but your version of Python is 3.5
+</code></pre><p>Therefore, it was decided to create a new environment to play it safe under
 Python 3.4 using <a href="https://www.continuum.io/downloads">conda</a> like so;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-less" data-lang="less">conda create -n py34 python=3.4 anaconda
-source activate p34</code></pre></div>
-<p>Then, open up MATLAB and type in:</p>
+<pre><code class="language-less" data-lang="less">conda create -n py34 python=3.4 anaconda
+source activate p34
+</code></pre><p>Then, open up MATLAB and type in:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd <span style="color:#e6db74">&#34;matlabroot/extern/engines/python&#34;</span>
-python setup.py install</code></pre></div>
-<p>This will install the MATLAB engine for Python. Following that we need to ensure
+python setup.py install
+</code></pre></div><p>This will install the MATLAB engine for Python. Following that we need to ensure
 a few dependencies are also installed.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install --upgrade pip
 pip install jupyter
 pip install pymatbridge
 pip install matlab_kernel
-python -m matlab_kernel install</code></pre></div>
-<p>One may encounter the following <a href="https://github.com/jupyter/notebook/issues/297">error</a>,
+python -m matlab_kernel install
+</code></pre></div><p>One may encounter the following <a href="https://github.com/jupyter/notebook/issues/297">error</a>,
 this can be resolved by doing the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda remove pyzmq <span style="color:#f92672">&amp;&amp;</span> pip install pyzmq</code></pre></div>
-<p>Once all of these steps have been completed, you should be able to start a new
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda remove pyzmq <span style="color:#f92672">&amp;&amp;</span> pip install pyzmq
+</code></pre></div><p>Once all of these steps have been completed, you should be able to start a new
 Jupyter notebook with a MATLAB kernel like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jupyter notebook</code></pre></div>
-<p>Then in the notebook, select MATLAB from the &lsquo;New&rsquo; menu in the top right hand
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jupyter notebook
+</code></pre></div><p>Then in the notebook, select MATLAB from the &lsquo;New&rsquo; menu in the top right hand
 corner. Alternatively, from the command line, one can simply run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jupyter console --kernel matlab</code></pre></div>
-<p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jupyter console --kernel matlab
+</code></pre></div>
   <figure class="left" >
     <img src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/matlabkernel.png"   />
     
   </figure>
 
 
-<div class="figcaption">MATLAB kernel</div></p>
-
-<h1 id="a-name-r-a-r"><a name="r"></a>R</h1>
-
+<!-- raw HTML omitted -->
+<h1 id="a-namerar"><!-- raw HTML omitted --><!-- raw HTML omitted -->R<a href="#a-namerar" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>R, the successor to S, is a statical programming language. Unlike MATLAB, R is
 an open source language that has now been around for over 20 years. Over that
 time, it established itself as the language of choice for mathematical
@@ -277,7 +263,6 @@ statistician and is widely used today. Although slower that the other two
 languages mentioned here, it is a highly expressive language and the DataFrame
 concept is one that has influences many other modern languages (Pandas - Python,
 DataFrames - Julia etc).</p>
-
 <p>The R kernel is fairly simple to download and install via <strong>conda</strong> package
 manager, and I would recommend going through this useful
 <a href="https://www.continuum.io/blog/developer/jupyter-and-conda-r">article</a>.
@@ -286,25 +271,23 @@ over a few hurdles in attempting to get things working on my machine. I will go
 through the steps I took installing without using <strong>conda</strong> package manager as it
 might be useful for people not using <strong>conda</strong>, but I would recommend if you are,
 the definitely follow the article I have listed above.</p>
-
 <p>Since I
-already has <strong>R</strong> installed on my machine, I didn&rsquo;t feel it necessary to
+already has <strong>R</strong> installed on my machine, I didn't feel it necessary to
 re-download <strong>r-essntials</strong> from <strong>conda</strong> so I followed the instructions on the
 <a href="https://github.com/IRkernel/IRkernel">IRKernel GitHub readme</a> which instructed
 me to install the relevant dev tools from within <code>R</code> like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">install.packages</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;repr&#39;</span>, <span style="color:#e6db74">&#39;IRdisplay&#39;</span>, <span style="color:#e6db74">&#39;crayon&#39;</span>, <span style="color:#e6db74">&#39;pbdZMQ&#39;</span>, <span style="color:#e6db74">&#39;devtools&#39;</span>))
-devtools<span style="color:#f92672">::</span><span style="color:#a6e22e">install_github</span>(<span style="color:#e6db74">&#39;IRkernel/IRkernel&#39;</span>)
-IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>()  <span style="color:#75715e"># to register the kernel in the current R installation</span></code></pre></div>
-<p>This produced the following error:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-less" data-lang="less">Error in curl::curl_fetch_memory(url, handle = handle) :
-Peer certificate cannot be authenticated with given CA certificates</code></pre></div>
-<p>According to
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">install.packages</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">repr&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">IRdisplay&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">crayon&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">pbdZMQ&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">devtools&#39;</span>))
+devtools<span style="color:#f92672">::</span><span style="color:#a6e22e">install_github</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">IRkernel/IRkernel&#39;</span>)
+IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>()  <span style="color:#75715e"># to register the kernel in the current R installation</span>
+</code></pre></div><p>This produced the following error:</p>
+<pre><code class="language-less" data-lang="less">Error in curl::curl_fetch_memory(url, handle = handle) :
+Peer certificate cannot be authenticated with given CA certificates
+</code></pre><p>According to
 <a href="http://stackoverflow.com/questions/31293325/r-install-github-fails">stackoverflow</a>
 this can be easily resolved by setting;</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(httr)
-<span style="color:#a6e22e">set_config</span>( <span style="color:#a6e22e">config</span>( ssl_verifypeer <span style="color:#f92672">=</span> <span style="color:#ae81ff">0L</span> ) )</code></pre></div>
-<p>at the <strong>R</strong> prompt.</p>
-
+<span style="color:#a6e22e">set_config</span>( <span style="color:#a6e22e">config</span>( ssl_verifypeer <span style="color:#f92672">=</span> <span style="color:#ae81ff">0L</span> ) )
+</code></pre></div><p>at the <strong>R</strong> prompt.</p>
 <p>After installing I received the following error:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ which R
 /Users/me/anaconda/bin/R
@@ -313,87 +296,95 @@ $ /Users/me/anaconda/bin/R
 dyld: Library not loaded: @rpath/libpcre.1.dylib
   Referenced from: /Users/me/anaconda/lib/R/lib/libR.dylib
   Reason: image not found
-Trace/BPT trap: <span style="color:#ae81ff">5</span></code></pre></div>
-<p>This is another issue that can be resolved by looking at this
+Trace/BPT trap: <span style="color:#ae81ff">5</span>
+</code></pre></div><p>This is another issue that can be resolved by looking at this
 <a href="http://stackoverflow.com/questions/38467653/r-is-broken-with-dyld-library-not-loaded-rpath-libpcre-1-dylib">SO</a>
 post.</p>
-
 <p>I was able to search for the <em>libpcre.1.dylib</em> file by using the brilliant
 <strong>find</strong> command like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find / -iname <span style="color:#e6db74">&#34;libpcre.1.dylib&#34;</span></code></pre></div>
-<p>Alternatively one can use <a href="https://github.com/junegunn/fzf"><em>fzf</em></a> fuzzy finder
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find / -iname <span style="color:#e6db74">&#34;libpcre.1.dylib&#34;</span>
+</code></pre></div><p>Alternatively one can use <a href="https://github.com/junegunn/fzf"><em>fzf</em></a> fuzzy finder
 by changing directory to <strong>/</strong> and running <strong>fzf</strong>. Once inside the program,
 simply type: <strong>libpcre.1.dylib</strong> and it
 should search for you (this may take a while)</p>
-
 <p>Finally, the last step was to make Jupyter <em>see</em> the newly installed kernel by
 entering the following withing <strong>R</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># in R 3.3</span>
-IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ir33&#39;</span>, displayname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;R 3.3&#39;</span>)
+IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">ir33&#39;</span>, displayname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">R 3.3&#39;</span>)
 <span style="color:#75715e"># in R 3.2</span>
-IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ir32&#39;</span>, displayname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;R 3.2&#39;</span>)</code></pre></div>
-<p>To ensure this is system-wide, set user to <strong>FALSE</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(user <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)</code></pre></div>
-<p>When this is linked you should be off and away and read to use <strong>R</strong> in Jupyter
+IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">ir32&#39;</span>, displayname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">R 3.2&#39;</span>)
+</code></pre></div><p>To ensure this is system-wide, set user to <strong>FALSE</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(user <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+</code></pre></div><p>When this is linked you should be off and away and read to use <strong>R</strong> in Jupyter
 notebooks.</p>
 
-<p>
   <figure class="left" >
     <img src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/rkernel.png"   />
     
   </figure>
 
 
-<div class="figcaption">R kernel</div></p>
-
-<h1 id="a-name-julia-a-julia"><a name="julia"></a>Julia</h1>
-
+<!-- raw HTML omitted -->
+<h1 id="a-namejuliaajulia"><!-- raw HTML omitted --><!-- raw HTML omitted -->Julia<a href="#a-namejuliaajulia" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>Julia is a relatively new programming language designed to be a modern scientific
 programming language for the 21st century.</p>
-
 <p><a href="http://lectures.quantecon.org/jl/getting_started.html">Here</a> is a good guide to
 get up and running quickly.</p>
-
 <p>Julia was definitely the easiest out of the three kernels mentioned here. All
 that is required is a Julia to be <a href="http://julialang.org/downloads/">downloaded</a>
 at version 0.4 or greater on your laptop and to run the
 following commands from within Julia:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Pkg<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#34;IJulia&#34;</span>)</code></pre></div>
-<p>Then:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Pkg<span style="color:#f92672">.</span>add(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">IJulia</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><p>Then:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">using IJulia
-notebook()</code></pre></div>
-<p>will open up a new tab in your default browser.</p>
-
+notebook()
+</code></pre></div><p>will open up a new tab in your default browser.</p>
 <p>There were a few gotcha I did encounter, the main one being <a href="https://github.com/tbreloff/Plots.jl/issues/258">trouble with several
 plotting packages</a> with
 Julia.0.5.0 (14-11-2016). I reverted back to Julia 0.4.6
 and everything seems to work. I am sure this is only a temporally issue and will be
 resolved soon.</p>
-
 <p>Another hiccup once might have may relate to this <a href="https://github.com/jupyter/notebook/issues/297">issue</a> of the kernel failing to
 start (Note, this is the same issue mentioned above for the MATLAB kernel)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda remove pyzmq
-pip install pyzmq</code></pre></div>
-<p>
+pip install pyzmq
+</code></pre></div>
   <figure class="left" >
     <img src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/juliakernel.png"   />
     
   </figure>
 
 
-<div class="figcaption">Julia kernel</div></p>
-
-<h2 id="final-comments">Final Comments.</h2>
-
+<!-- raw HTML omitted -->
+<h2 id="final-comments">Final Comments.<a href="#final-comments" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>I have focused on installing the kernels I felt most useful for <em>Scientific
 Computing</em>, however a list of other kernels can be found
 <a href="https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages">here</a>. Jupyter
 project is doing wonders in helping many people learn programming and also the
 research community with sharing code and methodology. I hope this can continue and
-if you have read this and also think it&rsquo;s awesome, you can find out more on
+if you have read this and also think it's awesome, you can find out more on
 their <a href="http://jupyter.org/">website</a>. Since Jupyter is an open source project
 you can always contribute on <a href="https://github.com/JuliaLang/julia">GitHub</a>, or in
 other ways through <a href="http://jupyter.org/donate.html">donations!</a></p>
+      </div></div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="http://www.tarekallamjr.com/blog/posts/2020-02-10-public-private-repos/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Private mirror of public repos on Github</span>
+        </a>
+      </span>
+      
+      
+    </div>
   </div>
   
 
