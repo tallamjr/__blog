@@ -8,6 +8,8 @@ tags: [reproducibility, programming]
 <!-- cover: img/posts/2020-02-10-Scala-Packaging/docker-and-scala.png -->
 ---
 
+<!--more-->
+
 # Public and Private Repo's on Github
 
 How to have an open public repository as well as a mirrored private repository on Github
