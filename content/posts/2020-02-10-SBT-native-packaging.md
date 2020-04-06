@@ -5,13 +5,14 @@ author: "Tarek Allam Jr"
 date: 2020-02-10
 category: tutorials
 tags: [reproducibility, programming]
-<!-- cover: img/posts/2020-02-10-Scala-Packaging/docker-and-scala.png -->
 ---
 
 Scala compiles down to Java byte code, which can then be run on any system running the JVM. It
 would be nice if one could extend this to native system binaries that can be run anywhere. Here I
 walk through the steps of getting SBT-Native-Packager to create a native binary as well as a docker
 image that can run my 'Hello World' application.
+
+<!--more-->
 
 {{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
 
