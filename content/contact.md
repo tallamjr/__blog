@@ -60,9 +60,8 @@ color: white;
 
 If you liked what you see on this blog and would like to contribute towards
 helping me write and showcase more on this blog, you can sponsor me here:
-<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/sponsors/tallamjr" data-icon="octicon-heart" aria-label="Sponsor @tallamjr on GitHub">Sponsor</a>
-<br>
+<!-- Place this tag where you want the button to render. -->
 <br>
 
 Alternatively if you just fancy to buy me a coffee, this is the button for you!
