@@ -22,3 +22,5 @@ will then be added, committed and pushed to `gh-pages`
 
 This workflow was set up using `git worktree` command, using this
 [guide](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+
+https://stackoverflow.com/questions/36171282/convert-scala-to-native-binary
