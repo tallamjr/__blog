@@ -63,6 +63,6 @@ url = "/about/"
 title = "Contact"
 url = "/contact/"
 
-[[params.nav.custom]]
-title = "PhD"
-url = "https://github.com/tallamjr/phd"
+# [[params.nav.custom]]
+# title = "PhD"
+# url = "https://github.com/tallamjr/phd"
