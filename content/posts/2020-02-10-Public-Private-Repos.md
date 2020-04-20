@@ -1,18 +1,18 @@
 ---
 draft: false
-title: "Private mirror of public repos on Github"
+title: "Mirroring Public Repos on Github, Privately"
 author: "Tarek Allam Jr"
 date: 2020-02-10
-category: tutorials
+categories: [tutorials]
 tags: [reproducibility, programming]
-<!-- cover: img/posts/2020-02-10-Scala-Packaging/docker-and-scala.png -->
 ---
+
+How to have an open public repository as well as a mirrored private repository on Github
 
 <!--more-->
 
 # Public and Private Repo's on Github
 
-How to have an open public repository as well as a mirrored private repository on Github
 
 These steps were inspired from this guide of '[Mirroring a
 repository'](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository#mirroring-a-repository) on Github documentation
@@ -333,3 +333,4 @@ To github.com:tallamjr/private.git
  + 848079d...d1293c2 master -> master (forced update)
 14:51:30 ✔ ~/Github/origin/private (master) ::
 ```
+
