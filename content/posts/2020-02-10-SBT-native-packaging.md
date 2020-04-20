@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "Packaging Scala Applications"
 author: "Tarek Allam Jr"
 date: 2020-02-10
