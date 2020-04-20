@@ -1,0 +1,19 @@
+<script src="https://utteranc.es/client.js"
+        repo="tallamjr/blog"
+        issue-term="pathname"
+        label="comment"
+        theme="github-dark-orange"
+        crossorigin="anonymous"
+        async>
+</script>
+<section id="footer" class="footer">
+    {{- $copyright := site.Copyright -}}
+    {{- if not $copyright -}}
+        {{- $copyright = site.Title | safeHTML -}}
+    {{- end -}}
+    {{- partial "copyright.html" ($copyright | safeHTML) -}}
+</section>
+{{- partial "math.html" . -}}
+{{- partial "syntax.html" . -}}
+{{- template "_internal/google_analytics_async.html" . -}}
+{{- partial "custom-js.html" . -}}
