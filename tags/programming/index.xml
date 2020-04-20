@@ -1,33 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>programming on The AstroInformatic</title>
-    <link>http://www.tarekallamjr.com/blog/tags/programming/</link>
+    <link>/blog/tags/programming/</link>
     <description>Recent content in programming on The AstroInformatic</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
     <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.tarekallamjr.com/blog/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/blog/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Private mirror of public repos on Github</title>
-      <link>http://www.tarekallamjr.com/blog/posts/2020-02-10-public-private-repos/</link>
+      <title>Mirroring Public Repos on Github, Privately</title>
+      <link>/blog/posts/2020-02-10-public-private-repos/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.tarekallamjr.com/blog/posts/2020-02-10-public-private-repos/</guid>
-      <description></description>
+      <guid>/blog/posts/2020-02-10-public-private-repos/</guid>
+      <description>&lt;p&gt;How to have an open public repository as well as a mirrored private repository on Github&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Packaging Scala Applications</title>
+      <link>/blog/posts/2020-02-10-sbt-native-packaging/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-02-10-sbt-native-packaging/</guid>
+      <description>&lt;p&gt;Scala compiles down to Java byte code, which can then be run on any system running the JVM. It
+would be nice if one could extend this to native system binaries that can be run anywhere. Here I
+walk through the steps of getting SBT-Native-Packager to create a native binary as well as a docker
+image that can run my &amp;lsquo;Hello World&amp;rsquo; application.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Multilingual Notebooks: A Polyglot&#39;s Playground</title>
-      <link>http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/</link>
+      <link>/blog/posts/2016-11-12-matlab-r-julia-notebooks/</link>
       <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/</guid>
+      <guid>/blog/posts/2016-11-12-matlab-r-julia-notebooks/</guid>
       <description>&lt;p&gt;&lt;em&gt;Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
 notebooks. Also discussed are some of the gotchas I encountered along the way.&lt;/em&gt;&lt;/p&gt;</description>
+      
     </item>
     
   </channel>
