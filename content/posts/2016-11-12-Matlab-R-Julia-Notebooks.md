@@ -5,7 +5,6 @@ author: "Tarek Allam Jr"
 date: 2016-11-12
 category: tutorials
 tags: [reproducibility, programming]
-cover: img/posts/2016-11-12-Matlab-R-Julia-Notebooks/jupyternotebooks.png
 ---
 
 *Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
@@ -13,7 +12,7 @@ notebooks. Also discussed are some of the gotchas I encountered along the way.*
 
 <!--more-->
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
+{{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
 
 Jupyter notebooks are an amazing way of keeping track of programming pipelines
 and for learning concepts through programming. It is also a great way to
@@ -106,7 +105,7 @@ corner. Alternatively, from the command line, one can simply run:
 jupyter console --kernel matlab
 ```
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/matlabkernel.png">}}
+{{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/matlabkernel.png">}}
 <div class="figcaption">MATLAB kernel</div>
 
 # <a name="r"></a>R
@@ -198,7 +197,7 @@ IRkernel::installspec(user = FALSE)
 When this is linked you should be off and away and read to use **R** in Jupyter
 notebooks.
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/rkernel.png">}}
+{{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/rkernel.png">}}
 <div class="figcaption">R kernel</div>
 
 # <a name="julia"></a>Julia
@@ -238,7 +237,7 @@ conda remove pyzmq
 pip install pyzmq
 ```
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/juliakernel.png">}}
+{{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/juliakernel.png">}}
 <div class="figcaption">Julia kernel</div>
 
 ## Final Comments.
