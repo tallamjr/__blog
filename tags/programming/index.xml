@@ -23,19 +23,6 @@
     </item>
     
     <item>
-      <title>Packaging Scala Applications</title>
-      <link>/blog/posts/2020-02-10-sbt-native-packaging/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/posts/2020-02-10-sbt-native-packaging/</guid>
-      <description>&lt;p&gt;Scala compiles down to Java byte code, which can then be run on any system running the JVM. It
-would be nice if one could extend this to native system binaries that can be run anywhere. Here I
-walk through the steps of getting SBT-Native-Packager to create a native binary as well as a docker
-image that can run my &amp;lsquo;Hello World&amp;rsquo; application.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Multilingual Notebooks: A Polyglot&#39;s Playground</title>
       <link>/blog/posts/2016-11-12-matlab-r-julia-notebooks/</link>
       <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
