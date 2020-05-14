@@ -11,6 +11,11 @@
 ================================================== -->
 <link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33">
 
+<!-- Plotly embeddings
+REF: http://www.kellieottoboni.com/posts/2017/08/plotly-markup/
+================================================== -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 {{- define "title" -}}
     {{- $title := .Title -}}
     {{- if and (ne $title "") (ne $title site.Title) -}}
