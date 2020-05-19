@@ -68,5 +68,9 @@ title = "Projects"
 url = "/projects/"
 
 # [[params.nav.custom]]
+# title = "astroinformatics.xyz"
+# url = "http://www.astroinformatics.xyz"
+
+# [[params.nav.custom]]
 # title = "PhD"
 # url = "https://github.com/tallamjr/phd"
