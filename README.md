@@ -22,3 +22,7 @@ will then be added, committed and pushed to `gh-pages`
 
 This workflow was set up using `git worktree` command, using this
 [guide](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+
+### Testing
+
+In order to link check, please run: `muffet --verbose http://localhost:{$BLOG_PORT}/blog/`
