@@ -8,7 +8,7 @@ tags:
 - programming
 - unix
 - cloud
-title: Running Jupyter Notebooks on Hypatia
+title: "Running Jupyter Notebooks on Hypatia"
 ---
 
 *Jupyter Notebooks on Hypatia*
