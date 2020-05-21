@@ -1,7 +1,7 @@
 ---
 draft: false
 layout: post
-title: "Bufdo; That'll do.."
+title: "Ah bufdo; That'll do.."
 author: "Tarek Allam Jr"
 date: 2020-05-18
 categories: [misc]
@@ -26,7 +26,7 @@ like to have them render from within `vim`. To do this I use a plugin called
 plugin is different from the syntax generally required and used by Github.
 Therefore, a workaround has been developed such that I write the logs locally on
 a `local` branch, and then checkout to master and upon a `git push` some
-undercover wizardary works behind the scences.
+undercover wizardry works behind the scenes.
 
 Considering there could be potentially 100's or markdown files at some point,
 whatever I do, I should future proof the method for when that day comes when I
