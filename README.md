@@ -11,7 +11,7 @@ draft: false
 title: "Packaging Scala Applications"
 author: "Tarek Allam Jr"
 date: 2020-02-10
-category: tutorials
+categories: [tutorials]
 tags: [reproducibility, programming]
 ---
 ```
