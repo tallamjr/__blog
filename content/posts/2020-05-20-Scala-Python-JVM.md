@@ -117,5 +117,5 @@ Hello, Wolrd!
 
 # References
 
-This post was inspired by Alexis Seigneurin's much more detailed post [Spark - Calling Scala code from PySpark](https://aseigneurin.github.io/2016/09/01/spark-calling-scala-code-from-pyspark.html) which I recommend reading as well.
+This post was inspired by Alexis Seigneurin's much more detailed post [Spark - Calling Scala code from PySpark](https://aseigneurin.github.io/2016/09/01/spark-calling-scala-code-from-pyspark.html) which I highly recommend reading.
 
