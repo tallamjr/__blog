@@ -161,8 +161,8 @@ Now let's run it...
 
 ```bash
 $ ./target/universal/stage/bin/simplesbtproject
-Hello, world!
 
+Hello, world!
 ```
 
 Success, we can run a single "binary" for our application. I put binary in quotation marks there
