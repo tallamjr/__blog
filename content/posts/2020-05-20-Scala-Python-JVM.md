@@ -119,26 +119,3 @@ Hello, Wolrd!
 
 This post was inspired by Alexis Seigneurin's much more detailed post [Spark - Calling Scala code from PySpark](https://aseigneurin.github.io/2016/09/01/spark-calling-scala-code-from-pyspark.html) which I recommend reading as well.
 
-{{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
-
-- [Scala and SBT Introduction](#scala)
-- [SBT-Native-Packager](#native)
-- [Docker](#docker)
-
-```python
-print(f"Numpy: {np.__version__}")
-```
-
-Say if I said something here
-
-```bash
-$ echo "Hello World!"
-```
-
-```scala
-println("hello")
-def somefunction(col: String)
-
-val mate = Int 5
-```
-# <a name="matlab"></a>MATLAB
