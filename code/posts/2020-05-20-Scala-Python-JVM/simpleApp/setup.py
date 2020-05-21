@@ -7,7 +7,7 @@ with open('requirements.txt') as f:
 __FALLBACK_VERSION__ = '0.1'
 
 setup(
-    name="snspark",
+    name="simpleApp",
     use_scm_version={
         "root": ".",
         "relative_to": __file__,
