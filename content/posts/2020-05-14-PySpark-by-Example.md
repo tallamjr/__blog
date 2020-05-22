@@ -349,7 +349,7 @@ I assume this is simply a memory issue and on other laptops might well be fine..
 
 Playing with this dataset has been fun and it has been interesting to follow the course at the same
 time exploring `plotly`. I've put a few points on things I learned whilst writing this post.
-Overall, I have learned at lot and looked forward to exploring more "big-data"-sets with `pyspark`
+Overall, I have learned at lot and look forward to exploring more "big-data"-sets with `pyspark`
 and `plotly`
 
 ## *Things-I-Learned* [TIL]
