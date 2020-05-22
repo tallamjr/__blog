@@ -414,7 +414,7 @@ markdown such that they can be rendered into the blog with ease.
    rendered [here](/blog/notebooks/PySpark-by-Example.html) using the following command:
 
    ```bash
-    $ jupyter nbconvert --ExecutePreprocessor.kernel_name=python --ExecutePreprocessor.timeout=600 --to html --execute notebooks/*.ipynb --output-dir /Users/tallamjr/www/blog/static/notebooks
+    $ jupyter nbconvert --ExecutePreprocessor.kernel_name=python --ExecutePreprocessor.timeout=600 --to html --execute PySpark-by-Example.ipynb --output-dir /Users/tallamjr/www/blog/static/notebooks
    ```
 
    After look for ways to link point number 1. above and how one can add custom `css`, I discovered
