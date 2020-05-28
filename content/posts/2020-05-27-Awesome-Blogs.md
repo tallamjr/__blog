@@ -20,7 +20,9 @@ The idea is that this list will grow (and possibly shrink) over time as I discov
 blogs, and I will use this list as a reference for myself.
 
 Much of the list is the same as David's, but I have added a couple, namely Databricks and NVIDIA's
-engineering blog, and removed some to make it more digestible for myself:
+engineering blog, and removed some to make it more digestible. There is a very substantial list of
+[Software Engineering blogs](https://github.com/kilimchoi/engineering-blogs) by Kilim Choi which I
+recommend looking into for a more complete list.
 
 * [Engineering Blog | Facebook Code](https://code.facebook.com/posts)
 * [Engineering | Twitter Blogs](https://blog.twitter.com/engineering)
