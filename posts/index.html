@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 
@@ -37,7 +37,89 @@
 
 
 
-<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33"><title>Posts&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.272cb8d2c49ee6175e4c3f7f89fb6a0cb80e0dd5ce88107183aa6cf7e4a2b2411c914fab7aba413197d249cda3815434.css" integrity="sha384-Jyy40sSe5hdeTD9/iftqDLgODdXOiBBxg6ps9&#43;SiskEckU&#43;rerpBMZfSSc2jgVQ0"><link rel="alternate" type="application/rss+xml" href="/blog/posts/index.xml" title="The AstroInformatic" /><body>
+<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33">
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style>
+.tooltip {
+  display: inline;
+  position: relative;
+  border-bottom: 2px dotted black;
+}
+
+.tooltip:hover {
+  color: #fc6a5d;
+  text-decoration: none;
+}
+
+.tooltip:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-right:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  right: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-left:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  left: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip:hover:before {
+  border: solid;
+  border-color: #111 transparent;
+  border-color: rgba(0, 0, 0, .8) transparent;
+  border-width: .4em .4em 0 .4em;
+  bottom: 1em;
+  content: "";
+  display: block;
+  left: 2em;
+  position: absolute;
+  z-index: 100;
+}
+
+</style><title>Posts&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.272cb8d2c49ee6175e4c3f7f89fb6a0cb80e0dd5ce88107183aa6cf7e4a2b2411c914fab7aba413197d249cda3815434.css" integrity="sha384-Jyy40sSe5hdeTD9/iftqDLgODdXOiBBxg6ps9&#43;SiskEckU&#43;rerpBMZfSSc2jgVQ0"><link rel="alternate" type="application/rss+xml" href="/blog/posts/index.xml" title="The AstroInformatic" /><body>
     <div class="base-body"><section id="header" class="site header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/blog/"><span class="site name">The AstroInformatic</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/blog/about/">About</a><a class="nav item" href="/blog/contact/">Contact</a><a class="nav item" href="/blog/projects/">Projects</a><a class="nav item" href="/blog/categories/">Categories</a><a class="nav item" href="/blog/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">#astroinformatics</span></div></section><div id="content"><section class="article header"><h1>Posts</h1></section><style>
@@ -67,9 +149,19 @@
 </style>
 <div class="float-left-area">
 <div class="inner-left">
-<ul class="note list"><li class="item"><a class="note" href="/blog/posts/2020-02-10-public-private-repos/">
+<ul class="note list"><li class="item"><a class="note" href="/blog/posts/2020-05-27-awesome-blogs/">
+            <p class="note title">Awesome Engineering Blogs</p><p class="note date">May 27, 2020</p><p class="note content">A lot of the really amazing engineering is taking place in companies, and what&rsquo;s great is that they love to talk about it! Here is my collection of awesome engineering blogs&hellip;
+<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/blog/categories/news/">news</a><a class="tag" href="/blog/tags/oss/">oss</a><a class="tag" href="/blog/tags/programming/">programming</a></p></li><li class="item"><a class="note" href="/blog/posts/2020-05-20-scala-python-jvm/">
+            <p class="note title">Using PySpark to call compiled Scala from Python</p><p class="note date">May 20, 2020</p><p class="note content">Calling compiled Scala code inside the JVM from Python using PySpark
+<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="tag" href="/blog/tags/reproducibility/">reproducibility</a><a class="tag" href="/blog/tags/programming/">programming</a></p></li><li class="item"><a class="note" href="/blog/posts/2020-05-18-bufdo-will-do/">
+            <p class="note title">Ah bufdo; That'll do..</p><p class="note date">May 18, 2020</p><p class="note content">A while ago I worked on a method to allow local writing of development logs in markdown, which I could then upload to Github where my supervisor could take a look. Here are the steps..
+<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/blog/categories/misc/">misc</a><a class="tag" href="/blog/tags/vim/">vim</a><a class="tag" href="/blog/tags/processing/">processing</a><a class="tag" href="/blog/tags/unix/">unix</a></p></li><li class="item"><a class="note" href="/blog/posts/2020-05-14-pyspark-by-example/">
+            <p class="note title">PySpark by Example</p><p class="note date">May 14, 2020</p><p class="note content">Here are my worked examples from the very useful LinkedIn Learning course: PySpark by Example by Jonathan Fernandes : https://www.linkedin.com/learning/apache-pyspark-by-example
+<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/blog/categories/tutorials/">tutorials</a><a class="tag" href="/blog/tags/spark/">spark</a><a class="tag" href="/blog/tags/visualisation/">visualisation</a></p></li><li class="item"><a class="note" href="/blog/posts/2020-02-10-public-private-repos/">
             <p class="note title">Mirroring Public Repos on Github, Privately</p><p class="note date">Feb 10, 2020</p><p class="note content">How to have an open public repository as well as a mirrored private repository on Github
-<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/blog/categories/tutorials/">tutorials</a><a class="tag" href="/blog/tags/reproducibility/">reproducibility</a><a class="tag" href="/blog/tags/programming/">programming</a></p></li><li class="item"><a class="note" href="/blog/posts/2016-11-12-matlab-r-julia-notebooks/">
+<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/blog/categories/tutorials/">tutorials</a><a class="tag" href="/blog/tags/reproducibility/">reproducibility</a><a class="tag" href="/blog/tags/programming/">programming</a></p></li><li class="item"><a class="note" href="/blog/posts/2020-02-10-sbt-native-packaging/">
+            <p class="note title">Packaging Scala Applications</p><p class="note date">Feb 10, 2020</p><p class="note content">Scala compiles down to Java byte code, which can then be run on any system running the JVM. It would be nice if one could extend this to native system binaries that can be run anywhere. Here I walk through the steps of getting SBT-Native-Packager to create a native binary as well as a docker image that can run my &lsquo;Hello World&rsquo; application.
+<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="tag" href="/blog/tags/reproducibility/">reproducibility</a><a class="tag" href="/blog/tags/programming/">programming</a></p></li><li class="item"><a class="note" href="/blog/posts/2016-11-12-matlab-r-julia-notebooks/">
             <p class="note title">Multilingual Notebooks: A Polyglot's Playground</p><p class="note date">Nov 12, 2016</p><p class="note content">Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter notebooks. Also discussed are some of the gotchas I encountered along the way.
 <span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="tag" href="/blog/tags/reproducibility/">reproducibility</a><a class="tag" href="/blog/tags/programming/">programming</a></p></li></ul></div>
 </div>
@@ -77,7 +169,7 @@
 <div class="float-right-area">
 <div class="inner-right">
 <img src="http://www.tarekallamjr.com/blog/img/profile-pic-smile-square-crop.jpg" style="float: right;margin: 0px 0px 10px 15px;">
-<a class="twitter-timeline" data-lang="en" data-width="220" data-height="800" data-theme="dark" href="https://twitter.com/tallamjr?ref_src=twsrc%5Etfw">Tweets by tallamjr</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-lang="en" data-width="220" data-height="2000" data-theme="dark" href="https://twitter.com/tallamjr?ref_src=twsrc%5Etfw">Tweets by tallamjr</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 

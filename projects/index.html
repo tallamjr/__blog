@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 
@@ -37,13 +37,145 @@
 
 
 
-<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33"><title>Projects&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.272cb8d2c49ee6175e4c3f7f89fb6a0cb80e0dd5ce88107183aa6cf7e4a2b2411c914fab7aba413197d249cda3815434.css" integrity="sha384-Jyy40sSe5hdeTD9/iftqDLgODdXOiBBxg6ps9&#43;SiskEckU&#43;rerpBMZfSSc2jgVQ0"><body>
+<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33">
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style>
+.tooltip {
+  display: inline;
+  position: relative;
+  border-bottom: 2px dotted black;
+}
+
+.tooltip:hover {
+  color: #fc6a5d;
+  text-decoration: none;
+}
+
+.tooltip:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-right:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  right: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-left:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  left: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip:hover:before {
+  border: solid;
+  border-color: #111 transparent;
+  border-color: rgba(0, 0, 0, .8) transparent;
+  border-width: .4em .4em 0 .4em;
+  bottom: 1em;
+  content: "";
+  display: block;
+  left: 2em;
+  position: absolute;
+  z-index: 100;
+}
+
+</style><title>Projects&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.272cb8d2c49ee6175e4c3f7f89fb6a0cb80e0dd5ce88107183aa6cf7e4a2b2411c914fab7aba413197d249cda3815434.css" integrity="sha384-Jyy40sSe5hdeTD9/iftqDLgODdXOiBBxg6ps9&#43;SiskEckU&#43;rerpBMZfSSc2jgVQ0"><body>
     <div class="base-body"><section id="header" class="site header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/blog/"><span class="site name">The AstroInformatic</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/blog/about/">About</a><a class="nav item" href="/blog/contact/">Contact</a><a class="nav item" href="/blog/projects/">Projects</a><a class="nav item" href="/blog/categories/">Categories</a><a class="nav item" href="/blog/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">#astroinformatics</span></div></section><div id="content"><div class="article-container"><section class="article header">
     <h1 class="article title">Projects</h1></section><article class="article markdown-body"><h1 id="projects">Projects</h1>
-<span class="image-container"><span class="link" ><a href="/blog/img/contributions.png" 
-        target="_blank"><img class="img" src="/blog/img/contributions.png"/></a></span>
+<p>Below is a collection of open-source personal projects I am working on, as well as some very interesting projects I am lucky enough to be involved with.</p>
+<hr>
+<h5 id="simurghhttpsgithubcomalan-turing-institutesimurgh"><a href="https://github.com/alan-turing-institute/simurgh"target="_blank">simurgh</a></h5>
+<center>
+<img src="/blog/img/projects/simurgh-wiki.jpg" class="alignright" height="300" style="float: center;margin: 0px 0px 0px 0px;">
+</center>
+<p><code>simurgh</code> (pronounced Seymour) is an open source platform that supports developing and evaluating
+algorithms (AI agents) for automated air traffic control. It provides an easy to use interface for
+running experiments in an air traffic simulator as well as packages that support agent development.</p>
+<p>Air traffic control (ATC) is a complex task requiring real-time safety-critical decision making. In
+practice, air traffic control operators (ATCOs) monitor a given sector and issue commands to
+aircraft pilots to ensure safe separation between aircraft. They also have to consider the number
+and frequency of instructions issued, fuel efficiency and orderly handover between sectors.
+Optimising for the multiple objectives while accounting for uncertainty (e.g., due to aircraft mass,
+pilot behaviour or weather conditions) makes this a particularly complex task.</p>
+<p>The Simurgh project provides a research-focused user-friendly platform for testing automated
+approaches to ATC</p>
+<hr>
+<h5 id="wwwastroinformaticsxyz"><a href="http://www.astroinformatics.xyz">www.astroinformatics.xyz</a></h5>
+<!-- <img src="/blog/img/projects/logo_transparent.png" class="alignright" height="300" style="float: right;margin: 10px 5px 5px 0px;"> -->
+<center>
+<img src="/blog/img/projects/logo_transparent_resize.png" class="alignright" height="300" style="float: center;margin: 0px 0px 0px 0px;">
+</center>
+<p><code>astroinformatics.xyz</code> is a online book inspired by the OpenAI book
+<a href="http://www.astroinformatics.xyz/etc/www.openai.com"target="_blank">SpinningUp</a>. The idea is to have a resource
+that outlines the mathematics and technology involved with doing
+<a href="https://en.wikipedia.org/wiki/Astroinformatics"target="_blank">Astroinformatics</a> and the Mathematics and Data
+Science that underpins the research. It is still very much a work in progress, but the plan is to
+have 3 main sections:</p>
+<ol>
+<li><strong>Data Science</strong> for the Mathematics and Machine Learning theory.</li>
+<li><strong>Data Engineering</strong>; to showcase the technologies used, like Apache Spark or Apache Kafka for instance.</li>
+<li><strong>Research Engineering</strong> to outline the tools of the trade for reproducible research, model deployment and
+production system design.</li>
+</ol>
+<!-- <embed src="http://www.astroinformatics.xyz" width="675" height="400" /> -->
+<hr>
+<h5 id="option3httpsgithubcomtallamjroption3"><a href="https://github.com/tallamjr/option3"target="_blank">option3</a></h5>
+<!-- <img src="/blog/img/projects/logo_transparent.png" class="alignright" height="300" style="float: right;margin: 10px 5px 5px 0px;"> -->
+<center>
+<img src="/blog/img/projects/option3.png" class="alignright" height="300" style="float: center;margin: 0px 0px 0px 0px;">
+</center>
+<p><code>option3</code> is a proof of concept application that is being used to improve my understanding of
+Kafka and Spark for developing machine learning data pipelines. Inspired by Stephane Maarek&rsquo;s <a href="https://www.linkedin.com/learning/learn-apache-kafka-for-beginners"target="_blank">Kafka
+for Beginners</a> course, I hope to
+connect to the Twitter stream of tweets, apply some filtering and transformations, and finally
+visualise, in real-time, the processed data.</p>
+<br>
+<hr>
+<p>Follow me on <a href="https://www.github.com/tallamjr/"target="_blank">Github</a> and check out more of my projects:</p>
+<span class="image-container"><span class="link" ><a href="/blog/img/projects/contributions.png" 
+        target="_blank"><img class="img" src="/blog/img/projects/contributions.png"/></a></span>
 </span>
 </article></div><section class="article navigation"><p><a class="link" href="/blog/contact/"><span class="li">&larr;</span>Contact Me</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
     <p class="copyright">©2020 Notepadium.</p>

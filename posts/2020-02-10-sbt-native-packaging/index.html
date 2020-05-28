@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33">
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style>
+.tooltip {
+  display: inline;
+  position: relative;
+  border-bottom: 2px dotted black;
+}
+
+.tooltip:hover {
+  color: #fc6a5d;
+  text-decoration: none;
+}
+
+.tooltip:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-right:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  right: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-left:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  left: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip:hover:before {
+  border: solid;
+  border-color: #111 transparent;
+  border-color: rgba(0, 0, 0, .8) transparent;
+  border-width: .4em .4em 0 .4em;
+  bottom: 1em;
+  content: "";
+  display: block;
+  left: 2em;
+  position: absolute;
+  z-index: 100;
+}
+
+</style><title>Packaging Scala Applications&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.272cb8d2c49ee6175e4c3f7f89fb6a0cb80e0dd5ce88107183aa6cf7e4a2b2411c914fab7aba413197d249cda3815434.css" integrity="sha384-Jyy40sSe5hdeTD9/iftqDLgODdXOiBBxg6ps9&#43;SiskEckU&#43;rerpBMZfSSc2jgVQ0"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/blog/"><span class="site name">The AstroInformatic</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/blog/about/">About</a><a class="nav item" href="/blog/contact/">Contact</a><a class="nav item" href="/blog/projects/">Projects</a><a class="nav item" href="/blog/categories/">Categories</a><a class="nav item" href="/blog/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">#astroinformatics</span></div></section><div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Packaging Scala Applications</h1><p class="article date">Feb 10, 2020<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><p>Scala compiles down to Java byte code, which can then be run on any system running the JVM. It
+would be nice if one could extend this to native system binaries that can be run anywhere. Here I
+walk through the steps of getting SBT-Native-Packager to create a native binary as well as a docker
+image that can run my &lsquo;Hello World&rsquo; application.</p>
+<p>For this short post, I have created a &ldquo;simpleApp&rdquo; which is a simple &ldquo;Hello, World!&rdquo; application in
+Scala. The example code for this post is in the standard maven directory layout, i.e:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">.
+├── build.sbt
+├── project
+│   ├── build.properties
+│   ├── plugins.sbt
+│   ├── project
+│   └── target
+├── src
+│   ├── main
+│   │   └── scala
+│   │       └── simple
+│   │           └── SimpleApp.scala
+│   └── <span class="nb">test</span>
+│       └── scala
+│           └── simple
+└── target
+
+</code></pre></div><p>and with the <code>SimpleApp.scala</code> code looking like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">package</span> <span class="n">simple</span><span class="p">;</span>
+
+<span class="nb">object</span> <span class="n">SimpleApp</span> <span class="p">{</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">[</span><span class="n">String</span><span class="p">]):</span> <span class="n">Unit</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Hello, world!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><p>Assuming you are familiar with <code>sbt</code>, one can use the following to compile the program to
+Java byte code and run:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> simpleApp
+$ sbt clean compile run
+<span class="o">[</span>info<span class="o">]</span> Loading settings <span class="k">for</span> project simpleapp-build from plugins.sbt ...
+<span class="o">[</span>info<span class="o">]</span> Loading project definition from /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/project
+<span class="o">[</span>info<span class="o">]</span> Loading settings <span class="k">for</span> project simpleapp from build.sbt ...
+<span class="o">[</span>info<span class="o">]</span> Set current project to SimpleSBTProject <span class="o">(</span>in build file:/Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/<span class="o">)</span>
+<span class="o">[</span>info<span class="o">]</span> Executing in batch mode. For better performance use sbt<span class="err">&#39;</span>s shell
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">0</span> s, completed 21-May-2020 11:16:49
+<span class="o">[</span>info<span class="o">]</span> Compiling <span class="m">1</span> Scala <span class="nb">source</span> to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/classes ...
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">5</span> s, completed 21-May-2020 11:16:54
+<span class="o">[</span>info<span class="o">]</span> running simple.SimpleApp
+Hello, world!
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">0</span> s, completed 21-May-2020 11:16:54
+</code></pre></div><p>Alternativly:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sbt <span class="s2">&#34;runMain simple.SimpleApp&#34;</span>
+<span class="o">[</span>info<span class="o">]</span> Loading settings <span class="k">for</span> project simpleapp-build from plugins.sbt ...
+<span class="o">[</span>info<span class="o">]</span> Loading project definition from /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/project
+<span class="o">[</span>info<span class="o">]</span> Loading settings <span class="k">for</span> project simpleapp from build.sbt ...
+<span class="o">[</span>info<span class="o">]</span> Set current project to SimpleSBTProject <span class="o">(</span>in build file:/Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/<span class="o">)</span>
+<span class="o">[</span>info<span class="o">]</span> Compiling <span class="m">1</span> Scala <span class="nb">source</span> to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/classes ...
+<span class="o">[</span>info<span class="o">]</span> running simple.SimpleApp
+Hello, world!
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">4</span> s, completed 21-May-2020 11:22:34
+
+</code></pre></div><p>Ok, great. We have a running Scala application built and run with <code>sbt</code>. But the point of this post
+is that we want to run a native binary&hellip;</p>
+<p>To achieve this <code>sbt-native-packager</code> plugin is used. Before we use it, one must ensure the plugin
+is &ldquo;installed&rdquo; in the <code>project/plugins.sbt</code> file like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ cat -n project/plugins.sbt
+
+ <span class="m">1</span>  logLevel :<span class="o">=</span> Level.Warn
+ <span class="m">2</span>
+ <span class="m">3</span>  // <span class="k">for</span> autoplugins
+ <span class="m">4</span>  addSbtPlugin<span class="o">(</span><span class="s2">&#34;com.typesafe.sbt&#34;</span> % <span class="s2">&#34;sbt-native-packager&#34;</span> % <span class="s2">&#34;1.6.1&#34;</span><span class="o">)</span>
+</code></pre></div><p>Furthermore we need to ensure we have set the right variables in the <code>build.sbt</code> file such as:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sed -n 1,7p build.sbt
+
+name :<span class="o">=</span> <span class="s2">&#34;SimpleSBTProject&#34;</span>
+
+version :<span class="o">=</span> <span class="s2">&#34;1.0&#34;</span>
+
+scalaVersion :<span class="o">=</span> <span class="s2">&#34;2.12.8&#34;</span>
+
+enablePlugins<span class="o">(</span>JavaAppPackaging<span class="o">)</span>
+</code></pre></div><p>With these two modified files and the project directory set up the way it is, we are ready to create
+our binary using the <code>stage</code> directive for <code>sbt</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sbt clean compile stage
+
+<span class="o">[</span>info<span class="o">]</span> Loading settings <span class="k">for</span> project simpleapp-build from plugins.sbt ...
+<span class="o">[</span>info<span class="o">]</span> Loading project definition from /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/project
+<span class="o">[</span>info<span class="o">]</span> Loading settings <span class="k">for</span> project simpleapp from build.sbt ...
+<span class="o">[</span>info<span class="o">]</span> Set current project to SimpleSBTProject <span class="o">(</span>in build file:/Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/<span class="o">)</span>
+<span class="o">[</span>info<span class="o">]</span> Executing in batch mode. For better performance use sbt<span class="err">&#39;</span>s shell
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">0</span> s, completed 21-May-2020 11:29:50
+<span class="o">[</span>info<span class="o">]</span> Compiling <span class="m">1</span> Scala <span class="nb">source</span> to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/classes ...
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">5</span> s, completed 21-May-2020 11:29:55
+<span class="o">[</span>info<span class="o">]</span> Main Scala API documentation to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/api...
+<span class="o">[</span>info<span class="o">]</span> Wrote /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/simplesbtproject_2.12-1.0.pom
+model contains <span class="m">3</span> documentable templates
+<span class="o">[</span>info<span class="o">]</span> Main Scala API documentation successful.
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">2</span> s, completed 21-May-2020 11:29:56
+
+</code></pre></div><p>Using <code>stage</code> creates a new set of files, found in the <code>target/universal</code> directory:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ tree target/universal/
+target/universal/
+├── scripts
+│   └── bin
+│       ├── simplesbtproject
+│       └── simplesbtproject.bat
+└── stage
+    ├── bin
+    │   ├── simplesbtproject
+    │   └── simplesbtproject.bat
+    └── lib
+        ├── org.scala-lang.scala-library-2.12.8.jar
+        └── simplesbtproject.simplesbtproject-1.0.jar
+
+<span class="m">5</span> directories, <span class="m">6</span> files
+
+</code></pre></div><p>Notice it creates a Unix and Windows version.</p>
+<p>Now let&rsquo;s run it&hellip;</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ./target/universal/stage/bin/simplesbtproject
+
+Hello, world!
+</code></pre></div><p>Success, we can run a single &ldquo;binary&rdquo; for our application. I put binary in quotation marks there
+because it is not exactly a binary file that is created, and one would still need Java installed on
+the system, but it allows a user to run a command like the above which is better suited for
+production settings.</p>
+<p>Ok, now that we can do this, &ldquo;What about making a Docker image!&rdquo; I hear you cry. This can also be
+done with some minor additions to the <code>build.sbt</code> file with:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sed -n 9,18p build.sbt
+
+enablePlugins<span class="o">(</span>DockerPlugin<span class="o">)</span>
+
+// change the name of the project adding the prefix of the user
+packageName in Docker :<span class="o">=</span> <span class="s2">&#34;tallamjr/&#34;</span> +  packageName.value
+//the base docker images
+dockerBaseImage :<span class="o">=</span> <span class="s2">&#34;java:8-jre&#34;</span>
+//the exposed port
+dockerExposedPorts :<span class="o">=</span> Seq<span class="o">(</span>9000<span class="o">)</span>
+//exposed volumes
+dockerExposedVolumes :<span class="o">=</span> Seq<span class="o">(</span><span class="s2">&#34;/opt/docker/logs&#34;</span><span class="o">)</span>
+
+</code></pre></div><p>With this in place, we can use <code>publishLocal</code> to create a docker image locally, which, when built we
+will run.</p>
+<p>Just to convince ourselves a new docker images is created <code>docker images</code> reveals only other
+projects after doing a <code>docker system prune -a</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+machcoll_bluebird   latest              140ca65afae2        <span class="m">2</span> months ago        1.15GB
+machcoll-img        dev-1bea126         38298723afa1        <span class="m">2</span> months ago        1.01GB
+nats-metrics-img    master-9a39559      3af43d2f4bd7        <span class="m">2</span> months ago        1.1GB
+
+</code></pre></div><p>Running <code>sbt publish:Local</code> creates the docker image for us (I have excluded much of the output for
+brevity)</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sbt publish:Local
+...
+<span class="o">[</span>info<span class="o">]</span> Built image tallamjr/simpleapp with tags <span class="o">[</span>1.0<span class="o">]</span>
+<span class="o">[</span>success<span class="o">]</span> Total time: <span class="m">53</span> s, completed 21-May-2020 11:46:06
+</code></pre></div><p>Now when we do <code>docker images</code> again we should see our new docker image:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker images
+
+REPOSITORY           TAG                 IMAGE ID            CREATED              SIZE
+tallamjr/simpleapp   1.0                 6eb32a8b2939        About a minute ago   317MB
+machcoll_bluebird    latest              140ca65afae2        <span class="m">2</span> months ago         1.15GB
+machcoll-img         dev-1bea126         38298723afa1        <span class="m">2</span> months ago         1.01GB
+nats-metrics-img     master-9a39559      3af43d2f4bd7        <span class="m">2</span> months ago         1.1GB
+java                 8-jre               e44d62cf8862        <span class="m">3</span> years ago          311MB
+
+</code></pre></div><p>Let&rsquo;s test this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run tallamjr/simpleapp:1.0
+
+Hello, world!
+</code></pre></div><p>So there we have it! <code>sbt-native-packager</code> is able to also publish to a docker registry and in
+addition to standard scripts like the one above, one can also <a href="https://www.scala-sbt.org/sbt-native-packager/gettingstarted.html#create-a-package"target="_blank">create other formats</a></p>
+<pre><code>universal:packageBin - Generates a universal zip file
+universal:packageZipTarball - Generates a universal tgz file
+debian:packageBin - Generates a deb
+docker:publishLocal - Builds a Docker image using the local Docker server
+rpm:packageBin - Generates an rpm
+universal:packageOsxDmg - Generates a DMG file with the same contents as the universal zip/tgz.
+windows:packageBin - Generates an MSI
+</code></pre>
+<p>For more check out the great documentation <a href="https://www.scala-sbt.org/sbt-native-packager/index.html"target="_blank">here</a></p>
+<p>All the code for this post is available on <a href="https://www.github.com/tallamjr/blog/code/posts/"target="_blank">Github</a></p>
+<!-- <span class="alignright"><span class="link" ><a href="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" 
+        target="_blank"><img class="img" src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png"/></a></span>
+</span> -->
+<!-- - [Scala and SBT Introduction](#scala) -->
+<!-- - [SBT-Native-Packager](#native) -->
+<!-- - [Docker](#docker) -->
+<!-- ```python -->
+<!-- print(f"Numpy: {np.__version__}") -->
+<!-- ``` -->
+<!-- Say if I said something here -->
+<!-- ```bash -->
+<!-- $ echo "Hello World!" -->
+<!-- ``` -->
+<!-- ```scala -->
+<!-- println("hello") -->
+<!-- def somefunction(col: String) -->
+<!-- val mate = Int 5 -->
+<!-- ``` -->
+<!-- # <a name="matlab"></a>MATLAB --></article><section class="article labels"><a class="tag" href=/blog/tags/reproducibility/>reproducibility</a><a class="tag" href=/blog/tags/programming/>programming</a></section></div><section class="article navigation"><p><a class="link" href="/blog/posts/2020-02-10-public-private-repos/"><span class="li">&larr;</span>Mirroring Public Repos on Github, Privately</a></p><p><a class="link" href="/blog/posts/2016-11-12-matlab-r-julia-notebooks/"><span class="li">&rarr;</span>Multilingual Notebooks: A Polyglot's Playground</a></p></section></div>
+    <script src="https://utteranc.es/client.js"
+            repo="tallamjr/blog"
+            issue-term="pathname"
+            label="comments"
+            theme="github-dark-orange"
+            crossorigin="anonymous"
+            async>
+    </script><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/&#43;DiW/UqRcLbRjq" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l&#43;B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd&#43;qj&#43;o24G5ZU2zJz" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-163920785-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>

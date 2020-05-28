@@ -7,15 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>oss</title>
+      <link>/blog/tags/oss/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/tags/oss/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>programming</title>
       <link>/blog/tags/programming/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/tags/programming/</guid>
       <description></description>
@@ -25,9 +35,59 @@
     <item>
       <title>reproducibility</title>
       <link>/blog/tags/reproducibility/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/tags/reproducibility/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>processing</title>
+      <link>/blog/tags/processing/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/tags/processing/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>/blog/tags/unix/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/tags/unix/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>/blog/tags/vim/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/tags/vim/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>spark</title>
+      <link>/blog/tags/spark/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/tags/spark/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>visualisation</title>
+      <link>/blog/tags/visualisation/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/tags/visualisation/</guid>
       <description></description>
       
     </item>

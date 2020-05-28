@@ -7,10 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Awesome Engineering Blogs</title>
+      <link>/blog/posts/2020-05-27-awesome-blogs/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-05-27-awesome-blogs/</guid>
+      <description>&lt;p&gt;A lot of the really amazing engineering is taking place in companies, and what&amp;rsquo;s great is that they
+love to talk about it! Here is my collection of awesome engineering blogs&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using PySpark to call compiled Scala from Python</title>
+      <link>/blog/posts/2020-05-20-scala-python-jvm/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-05-20-scala-python-jvm/</guid>
+      <description>&lt;p&gt;Calling compiled Scala code inside the JVM from Python using PySpark&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Ah bufdo; That&#39;ll do..</title>
+      <link>/blog/posts/2020-05-18-bufdo-will-do/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-05-18-bufdo-will-do/</guid>
+      <description>&lt;p&gt;A while ago I worked on a method to allow local writing of development logs in markdown, which I
+could then upload to Github where my supervisor could take a look. Here are the steps..&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>PySpark by Example</title>
+      <link>/blog/posts/2020-05-14-pyspark-by-example/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-05-14-pyspark-by-example/</guid>
+      <description>&lt;p&gt;Here are my worked examples from the very useful LinkedIn Learning course: PySpark by Example by
+Jonathan Fernandes : &lt;a href=&#34;https://www.linkedin.com/learning/apache-pyspark-by-example&#34;&gt;https://www.linkedin.com/learning/apache-pyspark-by-example&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Mirroring Public Repos on Github, Privately</title>
@@ -19,6 +62,19 @@
       
       <guid>/blog/posts/2020-02-10-public-private-repos/</guid>
       <description>&lt;p&gt;How to have an open public repository as well as a mirrored private repository on Github&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Packaging Scala Applications</title>
+      <link>/blog/posts/2020-02-10-sbt-native-packaging/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-02-10-sbt-native-packaging/</guid>
+      <description>&lt;p&gt;Scala compiles down to Java byte code, which can then be run on any system running the JVM. It
+would be nice if one could extend this to native system binaries that can be run anywhere. Here I
+walk through the steps of getting SBT-Native-Packager to create a native binary as well as a docker
+image that can run my &amp;lsquo;Hello World&amp;rsquo; application.&lt;/p&gt;</description>
       
     </item>
     

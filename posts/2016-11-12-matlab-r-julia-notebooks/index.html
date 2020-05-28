@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 
@@ -37,11 +37,93 @@
 
 
 
-<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33"><title>Multilingual Notebooks: A Polyglot&#39;s Playground&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.272cb8d2c49ee6175e4c3f7f89fb6a0cb80e0dd5ce88107183aa6cf7e4a2b2411c914fab7aba413197d249cda3815434.css" integrity="sha384-Jyy40sSe5hdeTD9/iftqDLgODdXOiBBxg6ps9&#43;SiskEckU&#43;rerpBMZfSSc2jgVQ0"><body>
+<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33">
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style>
+.tooltip {
+  display: inline;
+  position: relative;
+  border-bottom: 2px dotted black;
+}
+
+.tooltip:hover {
+  color: #fc6a5d;
+  text-decoration: none;
+}
+
+.tooltip:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-right:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  right: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip-left:hover:after {
+  background: #111;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 1em;
+  color: #fff;
+  content: attr(title);
+  display: block;
+  bottom: 1em;
+  left: 1em;
+  padding: .3em 1em;
+  position: absolute;
+  text-shadow: 0 1px 0 #000;
+  word-wrap: break-word;
+  min-width: 600px;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.tooltip:hover:before {
+  border: solid;
+  border-color: #111 transparent;
+  border-color: rgba(0, 0, 0, .8) transparent;
+  border-width: .4em .4em 0 .4em;
+  bottom: 1em;
+  content: "";
+  display: block;
+  left: 2em;
+  position: absolute;
+  z-index: 100;
+}
+
+</style><title>Multilingual Notebooks: A Polyglot&#39;s Playground&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.272cb8d2c49ee6175e4c3f7f89fb6a0cb80e0dd5ce88107183aa6cf7e4a2b2411c914fab7aba413197d249cda3815434.css" integrity="sha384-Jyy40sSe5hdeTD9/iftqDLgODdXOiBBxg6ps9&#43;SiskEckU&#43;rerpBMZfSSc2jgVQ0"><body>
     <div class="base-body"><section id="header" class="site header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/blog/"><span class="site name">The AstroInformatic</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/blog/about/">About</a><a class="nav item" href="/blog/contact/">Contact</a><a class="nav item" href="/blog/projects/">Projects</a><a class="nav item" href="/blog/categories/">Categories</a><a class="nav item" href="/blog/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">#astroinformatics</span></div></section><div id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Multilingual Notebooks: A Polyglot's Playground</h1><p class="article date">Nov 12, 2016</p></section><article class="article markdown-body"><p><em>Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
+    <h1 class="article title">Multilingual Notebooks: A Polyglot's Playground</h1><p class="article date">Nov 12, 2016<span class="reading-time"> • 6 minutes to read</span></p></section><article class="article markdown-body"><p><em>Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
 notebooks. Also discussed are some of the gotchas I encountered along the way.</em></p>
 <span class="alignright"><span class="link" ><a href="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" 
         target="_blank"><img class="img" src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png"/></a></span>
@@ -124,13 +206,13 @@ through the steps I took installing without using <strong>conda</strong> package
 might be useful for people not using <strong>conda</strong>, but I would recommend if you are,
 the definitely follow the article I have listed above.</p>
 <p>Since I
-already has <strong>R</strong> installed on my machine, I didn't feel it necessary to
+already has <strong>R</strong> installed on my machine, I didn&rsquo;t feel it necessary to
 re-download <strong>r-essntials</strong> from <strong>conda</strong> so I followed the instructions on the
 <a href="https://github.com/IRkernel/IRkernel"target="_blank">IRKernel GitHub readme</a> which instructed
 me to install the relevant dev tools from within <code>R</code> like so:</p>
-<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;</span><span class="s">repr&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="s">IRdisplay&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="s">crayon&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="s">pbdZMQ&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="s">devtools&#39;</span><span class="p">)</span><span class="p">)</span>
-<span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#39;</span><span class="s">IRkernel/IRkernel&#39;</span><span class="p">)</span>
-<span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">(</span><span class="p">)</span>  <span class="c1"># to register the kernel in the current R installation</span>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;repr&#39;</span><span class="p">,</span> <span class="s">&#39;IRdisplay&#39;</span><span class="p">,</span> <span class="s">&#39;crayon&#39;</span><span class="p">,</span> <span class="s">&#39;pbdZMQ&#39;</span><span class="p">,</span> <span class="s">&#39;devtools&#39;</span><span class="p">))</span>
+<span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#39;IRkernel/IRkernel&#39;</span><span class="p">)</span>
+<span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">()</span>  <span class="c1"># to register the kernel in the current R installation</span>
 </code></pre></div><p>This produced the following error:</p>
 <pre><code class="language-less" data-lang="less">Error in curl::curl_fetch_memory(url, handle = handle) :
 Peer certificate cannot be authenticated with given CA certificates
@@ -162,9 +244,9 @@ should search for you (this may take a while)</p>
 <p>Finally, the last step was to make Jupyter <em>see</em> the newly installed kernel by
 entering the following withing <strong>R</strong>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># in R 3.3</span>
-<span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;</span><span class="s">ir33&#39;</span><span class="p">,</span> <span class="n">displayname</span> <span class="o">=</span> <span class="s">&#39;</span><span class="s">R 3.3&#39;</span><span class="p">)</span>
+<span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;ir33&#39;</span><span class="p">,</span> <span class="n">displayname</span> <span class="o">=</span> <span class="s">&#39;R 3.3&#39;</span><span class="p">)</span>
 <span class="c1"># in R 3.2</span>
-<span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;</span><span class="s">ir32&#39;</span><span class="p">,</span> <span class="n">displayname</span> <span class="o">=</span> <span class="s">&#39;</span><span class="s">R 3.2&#39;</span><span class="p">)</span>
+<span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;ir32&#39;</span><span class="p">,</span> <span class="n">displayname</span> <span class="o">=</span> <span class="s">&#39;R 3.2&#39;</span><span class="p">)</span>
 </code></pre></div><p>To ensure this is system-wide, set user to <strong>FALSE</strong>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">IRkernel</span><span class="o">::</span><span class="nf">installspec</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 </code></pre></div><p>When this is linked you should be off and away and read to use <strong>R</strong> in Jupyter
@@ -182,10 +264,10 @@ get up and running quickly.</p>
 that is required is a Julia to be <a href="http://julialang.org/downloads/"target="_blank">downloaded</a>
 at version 0.4 or greater on your laptop and to run the
 following commands from within Julia:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">IJulia</span><span class="s2">&#34;</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;IJulia&#34;</span><span class="p">)</span>
 </code></pre></div><p>Then:</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">using</span> <span class="n">IJulia</span>
-<span class="n">notebook</span><span class="p">(</span><span class="p">)</span>
+<span class="n">notebook</span><span class="p">()</span>
 </code></pre></div><p>will open up a new tab in your default browser.</p>
 <p>There were a few gotcha I did encounter, the main one being <a href="https://github.com/tbreloff/Plots.jl/issues/258"target="_blank">trouble with several
 plotting packages</a> with
@@ -206,10 +288,10 @@ Computing</em>, however a list of other kernels can be found
 <a href="https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages"target="_blank">here</a>. Jupyter
 project is doing wonders in helping many people learn programming and also the
 research community with sharing code and methodology. I hope this can continue and
-if you have read this and also think it's awesome, you can find out more on
+if you have read this and also think it&rsquo;s awesome, you can find out more on
 their <a href="http://jupyter.org/"target="_blank">website</a>. Since Jupyter is an open source project
 you can always contribute on <a href="https://github.com/JuliaLang/julia"target="_blank">GitHub</a>, or in
-other ways through <a href="http://jupyter.org/donate.html"target="_blank">donations!</a></p></article><section class="article labels"><a class="tag" href=/blog/tags/reproducibility/>reproducibility</a><a class="tag" href=/blog/tags/programming/>programming</a></section></div><section class="article navigation"><p><a class="link" href="/blog/posts/2020-02-10-public-private-repos/"><span class="li">&larr;</span>Mirroring Public Repos on Github, Privately</a></p></section></div>
+other ways through <a href="http://jupyter.org/donate.html"target="_blank">donations!</a></p></article><section class="article labels"><a class="tag" href=/blog/tags/reproducibility/>reproducibility</a><a class="tag" href=/blog/tags/programming/>programming</a></section></div><section class="article navigation"><p><a class="link" href="/blog/posts/2020-02-10-sbt-native-packaging/"><span class="li">&larr;</span>Packaging Scala Applications</a></p></section></div>
     <script src="https://utteranc.es/client.js"
             repo="tallamjr/blog"
             issue-term="pathname"

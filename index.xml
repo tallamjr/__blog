@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Posts</title>
       <link>/blog/posts/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/posts/</guid>
       <description></description>
@@ -51,7 +51,8 @@ As part of my PhD I completed an internship at the Alan Turing Institute, where 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/blog/projects/</guid>
-      <description>Projects   </description>
+      <description>Projects Below is a collection of open-source personal projects I am working on, as well as some very interesting projects I am lucky enough to be involved with.
+ simurgh   simurgh (pronounced Seymour) is an open source platform that supports developing and evaluating algorithms (AI agents) for automated air traffic control. It provides an easy to use interface for running experiments in an air traffic simulator as well as packages that support agent development.</description>
       
     </item>
     

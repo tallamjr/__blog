@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/blog/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PySpark by Example</title>
+      <link>/blog/posts/2020-05-14-pyspark-by-example/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-05-14-pyspark-by-example/</guid>
+      <description>&lt;p&gt;Here are my worked examples from the very useful LinkedIn Learning course: PySpark by Example by
+Jonathan Fernandes : &lt;a href=&#34;https://www.linkedin.com/learning/apache-pyspark-by-example&#34;&gt;https://www.linkedin.com/learning/apache-pyspark-by-example&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Mirroring Public Repos on Github, Privately</title>

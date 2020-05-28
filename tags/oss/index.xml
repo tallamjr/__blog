@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>oss on The AstroInformatic</title>
+    <link>/blog/tags/oss/</link>
+    <description>Recent content in oss on The AstroInformatic</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/blog/tags/oss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Awesome Engineering Blogs</title>
+      <link>/blog/posts/2020-05-27-awesome-blogs/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/posts/2020-05-27-awesome-blogs/</guid>
+      <description>&lt;p&gt;A lot of the really amazing engineering is taking place in companies, and what&amp;rsquo;s great is that they
+love to talk about it! Here is my collection of awesome engineering blogs&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

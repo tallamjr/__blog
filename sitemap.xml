@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>http://www.tarekallamjr.com/blog/categories/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/posts/2020-05-27-awesome-blogs/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/categories/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/categories/news/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/oss/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/posts/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/programming/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/</loc><lastmod>2020-05-27T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/reproducibility/</loc><lastmod>2020-05-20T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/posts/2020-05-20-scala-python-jvm/</loc><lastmod>2020-05-20T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/posts/2020-05-18-bufdo-will-do/</loc><lastmod>2020-05-18T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/categories/misc/</loc><lastmod>2020-05-18T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/processing/</loc><lastmod>2020-05-18T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/unix/</loc><lastmod>2020-05-18T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/vim/</loc><lastmod>2020-05-18T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/posts/2020-05-14-pyspark-by-example/</loc><lastmod>2020-05-14T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/spark/</loc><lastmod>2020-05-14T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/categories/tutorials/</loc><lastmod>2020-05-14T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/tags/visualisation/</loc><lastmod>2020-05-14T00:00:00+00:00</lastmod></url><url>
     <loc>http://www.tarekallamjr.com/blog/posts/2020-02-10-public-private-repos/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
-    <loc>http://www.tarekallamjr.com/blog/posts/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
-    <loc>http://www.tarekallamjr.com/blog/tags/programming/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
-    <loc>http://www.tarekallamjr.com/blog/tags/reproducibility/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
-    <loc>http://www.tarekallamjr.com/blog/tags/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
-    <loc>http://www.tarekallamjr.com/blog/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
-    <loc>http://www.tarekallamjr.com/blog/categories/tutorials/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
+    <loc>http://www.tarekallamjr.com/blog/posts/2020-02-10-sbt-native-packaging/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod></url><url>
     <loc>http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/</loc><lastmod>2016-11-12T00:00:00+00:00</lastmod></url><url>
     <loc>http://www.tarekallamjr.com/blog/about/</loc></url><url>
     <loc>http://www.tarekallamjr.com/blog/contact/</loc></url><url>
