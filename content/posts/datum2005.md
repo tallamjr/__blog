@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "[DATUM-2005] "
 author: "Tarek Allam Jr"
 date: 2020-05-20
