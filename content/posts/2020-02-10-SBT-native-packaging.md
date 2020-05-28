@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Packaging Scala Applications"
 author: "Tarek Allam Jr"
 date: 2020-02-10
@@ -14,257 +14,265 @@ image that can run my 'Hello World' application.
 
 <!--more-->
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
+For this short post, I have created a "simpleApp" which is a simple "Hello, World!" application in
+Scala. The example code for this post is in the standard maven directory layout, i.e:
 
-- [Scala and SBT Introduction](#scala)
-- [SBT-Native-Packager](#native)
-- [Docker](#docker)
+```bash
+.
+├── build.sbt
+├── project
+│   ├── build.properties
+│   ├── plugins.sbt
+│   ├── project
+│   └── target
+├── src
+│   ├── main
+│   │   └── scala
+│   │       └── simple
+│   │           └── SimpleApp.scala
+│   └── test
+│       └── scala
+│           └── simple
+└── target
+
+```
+
+and with the `SimpleApp.scala` code looking like so:
 
 ```python
-print(f"Numpy: {np.__version__}")
+package simple;
+
+object SimpleApp {
+def main(args: Array[String]): Unit = {
+  println("Hello, world!")
+}
+}
+
 ```
 
-Say if I said something here
+Assuming you are familiar with `sbt`, one can use the following to compile the program to
+Java byte code and run:
 
 ```bash
-$ echo "Hello World!"
+$ cd simpleApp
+$ sbt clean compile run
+[info] Loading settings for project simpleapp-build from plugins.sbt ...
+[info] Loading project definition from /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/project
+[info] Loading settings for project simpleapp from build.sbt ...
+[info] Set current project to SimpleSBTProject (in build file:/Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[success] Total time: 0 s, completed 21-May-2020 11:16:49
+[info] Compiling 1 Scala source to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/classes ...
+[success] Total time: 5 s, completed 21-May-2020 11:16:54
+[info] running simple.SimpleApp
+Hello, world!
+[success] Total time: 0 s, completed 21-May-2020 11:16:54
 ```
-
-```scala
-println("hello")
-def somefunction(col: String)
-
-val mate = Int 5
-```
-# <a name="matlab"></a>MATLAB
-
-MATLAB (matrix laboratory) is ubiquitous in the world of scientific computing and is a many
-engineering and physics students only connection to programming. The brilliant
-abstraction away from the low-level implementation of [LAPACK](https://en.wikipedia.org/wiki/LAPACK) under the hood with
-a nice high level interface make MATLAB a very powerful and useful tool. Combine
-that with the Jupyter notebook and we now have a way of expressing complex
-mathematical concepts and doing compute numerical methods in an easy to read
-manner.
-
-To get started one needs to have MATLAB installed on their local machine. MATLAB
-is propriety software from the mathworks company but if you are affiliated with a
-university a license should be easy to come by. After the binary is installed,
-one needs to install the MATLAB engine for Python, instructions for downloading
-can be found
-[here](http://uk.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html).
-The system requirements for these installs can be found [here](http://uk.mathworks.com/help/matlab/matlab_external/system-requirements-for-matlab-engine-for-python.html),
-however, on the system requirement website, it states Python 3.5 is supported,
-but I found this not to be the case (*14-11-2016*) as I encountered the following error under a 3.5 environment:
-
-{{< highlight python >}}
-def somefunctions():
-    print("hello")
-
-val 5 = :Int
-{{< /highlight >}}
-{{< highlight go >}} A bunch of code here {{< /highlight >}}
-
-
-```matlab
-OSError: MATLAB Engine for Python supports Python version 2.7, 3.3 and 3.4, \
-but your version of Python is 3.5
-```
-
-Therefore, it was decided to create a new environment to play it safe under
-Python 3.4 using [conda](https://www.continuum.io/downloads) like so;
-
-
-```matlab
-conda create -n py34 python=3.4 anaconda
-source activate p34
-import something
-```
-
-Then, open up MATLAB and type in:
+Alternativly:
 
 ```bash
-$ cd "matlabroot/extern/engines/python"
-PATH=$HADOOP
-python setup.py install
+$ sbt "runMain simple.SimpleApp"
+[info] Loading settings for project simpleapp-build from plugins.sbt ...
+[info] Loading project definition from /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/project
+[info] Loading settings for project simpleapp from build.sbt ...
+[info] Set current project to SimpleSBTProject (in build file:/Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/)
+[info] Compiling 1 Scala source to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/classes ...
+[info] running simple.SimpleApp
+Hello, world!
+[success] Total time: 4 s, completed 21-May-2020 11:22:34
+
 ```
 
-This will install the MATLAB engine for Python. Following that we need to ensure
-a few dependencies are also installed.
+Ok, great. We have a running Scala application built and run with `sbt`. But the point of this post
+is that we want to run a native binary...
 
-```matlab
-$ pip install --upgrade pip
-pip install jupyter
-pip install pymatbridge
-pip install matlab_kernel
-python -m matlab_kernel install
-```
-
-One may encounter the following [error](https://github.com/jupyter/notebook/issues/297),
-this can be resolved by doing the following:
+To achieve this `sbt-native-packager` plugin is used. Before we use it, one must ensure the plugin
+is "installed" in the `project/plugins.sbt` file like so:
 
 ```bash
-conda remove pyzmq && pip install pyzmq
+$ cat -n project/plugins.sbt
+
+ 1  logLevel := Level.Warn
+ 2
+ 3  // for autoplugins
+ 4  addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.6.1")
 ```
 
-Once all of these steps have been completed, you should be able to start a new
-Jupyter notebook with a MATLAB kernel like so:
-
+Furthermore we need to ensure we have set the right variables in the `build.sbt` file such as:
 
 ```bash
-jupyter notebook
+$ sed -n 1,7p build.sbt
+
+name := "SimpleSBTProject"
+
+version := "1.0"
+
+scalaVersion := "2.12.8"
+
+enablePlugins(JavaAppPackaging)
 ```
 
-Then in the notebook, select MATLAB from the 'New' menu in the top right hand
-corner. Alternatively, from the command line, one can simply run:
+With these two modified files and the project directory set up the way it is, we are ready to create
+our binary using the `stage` directive for `sbt`.
 
 ```bash
-jupyter console --kernel matlab
+$ sbt clean compile stage
+
+[info] Loading settings for project simpleapp-build from plugins.sbt ...
+[info] Loading project definition from /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/project
+[info] Loading settings for project simpleapp from build.sbt ...
+[info] Set current project to SimpleSBTProject (in build file:/Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[success] Total time: 0 s, completed 21-May-2020 11:29:50
+[info] Compiling 1 Scala source to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/classes ...
+[success] Total time: 5 s, completed 21-May-2020 11:29:55
+[info] Main Scala API documentation to /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/api...
+[info] Wrote /Users/tallamjr/www/blog/code/posts/2020-02-10-SBT-native-packaging/simpleApp/target/scala-2.12/simplesbtproject_2.12-1.0.pom
+model contains 3 documentable templates
+[info] Main Scala API documentation successful.
+[success] Total time: 2 s, completed 21-May-2020 11:29:56
+
 ```
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/matlabkernel.png">}}
-<div class="figcaption">MATLAB kernel</div>
-
-# <a name="r"></a>R
-
-R, the successor to S, is a statical programming language. Unlike MATLAB, R is
-an open source language that has now been around for over 20 years. Over that
-time, it established itself as the language of choice for mathematical
-statistician and is widely used today. Although slower that the other two
-languages mentioned here, it is a highly expressive language and the DataFrame
-concept is one that has influences many other modern languages (Pandas - Python,
-DataFrames - Julia etc).
-
-The R kernel is fairly simple to download and install via **conda** package
-manager, and I would recommend going through this useful
-[article](https://www.continuum.io/blog/developer/jupyter-and-conda-r).
-Unfortunately I discovered that article after the fact, which meant I had to jump
-over a few hurdles in attempting to get things working on my machine. I will go
-through the steps I took installing without using **conda** package manager as it
-might be useful for people not using **conda**, but I would recommend if you are,
-the definitely follow the article I have listed above.
-
-Since I
-already has **R** installed on my machine, I didn't feel it necessary to
-re-download **r-essntials** from **conda** so I followed the instructions on the
-[IRKernel GitHub readme](https://github.com/IRkernel/IRkernel) which instructed
-me to install the relevant dev tools from within `R` like so:
-
-```r
-install.packages(c('repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'))
-devtools::install_github('IRkernel/IRkernel')
-IRkernel::installspec()  # to register the kernel in the current R installation
-```
-This produced the following error:
-```less
-Error in curl::curl_fetch_memory(url, handle = handle) :
-Peer certificate cannot be authenticated with given CA certificates
-```
-According to
-[stackoverflow](http://stackoverflow.com/questions/31293325/r-install-github-fails)
-this can be easily resolved by setting;
-```r
-library(httr)
-set_config( config( ssl_verifypeer = 0L ) )
-```
-at the **R** prompt.
-
-After installing I received the following error:
+Using `stage` creates a new set of files, found in the `target/universal` directory:
 
 ```bash
-$ which R
-/Users/me/anaconda/bin/R
+$ tree target/universal/
+target/universal/
+├── scripts
+│   └── bin
+│       ├── simplesbtproject
+│       └── simplesbtproject.bat
+└── stage
+    ├── bin
+    │   ├── simplesbtproject
+    │   └── simplesbtproject.bat
+    └── lib
+        ├── org.scala-lang.scala-library-2.12.8.jar
+        └── simplesbtproject.simplesbtproject-1.0.jar
 
-$ /Users/me/anaconda/bin/R
-dyld: Library not loaded: @rpath/libpcre.1.dylib
-  Referenced from: /Users/me/anaconda/lib/R/lib/libR.dylib
-  Reason: image not found
-Trace/BPT trap: 5
+5 directories, 6 files
+
 ```
-This is another issue that can be resolved by looking at this
-[SO](http://stackoverflow.com/questions/38467653/r-is-broken-with-dyld-library-not-loaded-rpath-libpcre-1-dylib)
-post.
 
-I was able to search for the *libpcre.1.dylib* file by using the brilliant
-**find** command like so:
+Notice it creates a Unix and Windows version.
 
+Now let's run it...
 
 ```bash
-find / -iname "libpcre.1.dylib"
+$ ./target/universal/stage/bin/simplesbtproject
+
+Hello, world!
 ```
 
-Alternatively one can use [*fzf*](https://github.com/junegunn/fzf) fuzzy finder
-by changing directory to **/** and running **fzf**. Once inside the program,
-simply type: **libpcre.1.dylib** and it
-should search for you (this may take a while)
+Success, we can run a single "binary" for our application. I put binary in quotation marks there
+because it is not exactly a binary file that is created, and one would still need Java installed on
+the system, but it allows a user to run a command like the above which is better suited for
+production settings.
 
-Finally, the last step was to make Jupyter *see* the newly installed kernel by
-entering the following withing **R**:
-
-```r
-# in R 3.3
-IRkernel::installspec(name = 'ir33', displayname = 'R 3.3')
-# in R 3.2
-IRkernel::installspec(name = 'ir32', displayname = 'R 3.2')
-```
-To ensure this is system-wide, set user to **FALSE**:
-```r
-IRkernel::installspec(user = FALSE)
-```
-When this is linked you should be off and away and read to use **R** in Jupyter
-notebooks.
-
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/rkernel.png">}}
-<div class="figcaption">R kernel</div>
-
-# <a name="julia"></a>Julia
-
-Julia is a relatively new programming language designed to be a modern scientific
-programming language for the 21st century.
-
-[Here](http://lectures.quantecon.org/jl/getting_started.html) is a good guide to
-get up and running quickly.
-
-Julia was definitely the easiest out of the three kernels mentioned here. All
-that is required is a Julia to be [downloaded](http://julialang.org/downloads/)
-at version 0.4 or greater on your laptop and to run the
-following commands from within Julia:
-
-```python
-Pkg.add("IJulia")
-```
-Then:
-```python
-using IJulia
-notebook()
-```
-will open up a new tab in your default browser.
-
-There were a few gotcha I did encounter, the main one being [trouble with several
-plotting packages](https://github.com/tbreloff/Plots.jl/issues/258) with
-Julia.0.5.0 (14-11-2016). I reverted back to Julia 0.4.6
-and everything seems to work. I am sure this is only a temporally issue and will be
-resolved soon.
-
-Another hiccup once might have may relate to this [issue](https://github.com/jupyter/notebook/issues/297) of the kernel failing to
-start (Note, this is the same issue mentioned above for the MATLAB kernel)
+Ok, now that we can do this, "What about making a Docker image!" I hear you cry. This can also be
+done with some minor additions to the `build.sbt` file with:
 
 ```bash
-conda remove pyzmq
-pip install pyzmq
+$ sed -n 9,18p build.sbt
+
+enablePlugins(DockerPlugin)
+
+// change the name of the project adding the prefix of the user
+packageName in Docker := "tallamjr/" +  packageName.value
+//the base docker images
+dockerBaseImage := "java:8-jre"
+//the exposed port
+dockerExposedPorts := Seq(9000)
+//exposed volumes
+dockerExposedVolumes := Seq("/opt/docker/logs")
+
 ```
 
-{{< figure src="/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/juliakernel.png">}}
-<div class="figcaption">Julia kernel</div>
+With this in place, we can use `publishLocal` to create a docker image locally, which, when built we
+will run.
 
-## Final Comments.
+Just to convince ourselves a new docker images is created `docker images` reveals only other
+projects after doing a `docker system prune -a`:
 
-I have focused on installing the kernels I felt most useful for *Scientific
-Computing*, however a list of other kernels can be found
-[here](https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages). Jupyter
-project is doing wonders in helping many people learn programming and also the
-research community with sharing code and methodology. I hope this can continue and
-if you have read this and also think it's awesome, you can find out more on
-their [website](http://jupyter.org/). Since Jupyter is an open source project
-you can always contribute on [GitHub](https://github.com/JuliaLang/julia), or in
-other ways through [donations!](http://jupyter.org/donate.html)
+```bash
+$ docker images
 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+machcoll_bluebird   latest              140ca65afae2        2 months ago        1.15GB
+machcoll-img        dev-1bea126         38298723afa1        2 months ago        1.01GB
+nats-metrics-img    master-9a39559      3af43d2f4bd7        2 months ago        1.1GB
+
+```
+
+Running `sbt publish:Local` creates the docker image for us (I have excluded much of the output for
+brevity)
+
+```bash
+$ sbt publish:Local
+...
+[info] Built image tallamjr/simpleapp with tags [1.0]
+[success] Total time: 53 s, completed 21-May-2020 11:46:06
+```
+
+Now when we do `docker images` again we should see our new docker image:
+
+```bash
+$ docker images
+
+REPOSITORY           TAG                 IMAGE ID            CREATED              SIZE
+tallamjr/simpleapp   1.0                 6eb32a8b2939        About a minute ago   317MB
+machcoll_bluebird    latest              140ca65afae2        2 months ago         1.15GB
+machcoll-img         dev-1bea126         38298723afa1        2 months ago         1.01GB
+nats-metrics-img     master-9a39559      3af43d2f4bd7        2 months ago         1.1GB
+java                 8-jre               e44d62cf8862        3 years ago          311MB
+
+```
+
+Let's test this:
+
+```bash
+$ docker run tallamjr/simpleapp:1.0
+
+Hello, world!
+```
+
+So there we have it! `sbt-native-packager` is able to also publish to a docker registry and in
+addition to standard scripts like the one above, one can also [create other formats](https://www.scala-sbt.org/sbt-native-packager/gettingstarted.html#create-a-package)
+
+    universal:packageBin - Generates a universal zip file
+    universal:packageZipTarball - Generates a universal tgz file
+    debian:packageBin - Generates a deb
+    docker:publishLocal - Builds a Docker image using the local Docker server
+    rpm:packageBin - Generates an rpm
+    universal:packageOsxDmg - Generates a DMG file with the same contents as the universal zip/tgz.
+    windows:packageBin - Generates an MSI
+
+
+For more check out the great documentation [here](https://www.scala-sbt.org/sbt-native-packager/index.html)
+
+All the code for this post is available on [Github](https://www.github.com/tallamjr/blog/code/posts/)
+
+<!-- {{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}} -->
+
+<!-- - [Scala and SBT Introduction](#scala) -->
+<!-- - [SBT-Native-Packager](#native) -->
+<!-- - [Docker](#docker) -->
+
+<!-- ```python -->
+<!-- print(f"Numpy: {np.__version__}") -->
+<!-- ``` -->
+
+<!-- Say if I said something here -->
+
+<!-- ```bash -->
+<!-- $ echo "Hello World!" -->
+<!-- ``` -->
+
+<!-- ```scala -->
+<!-- println("hello") -->
+<!-- def somefunction(col: String) -->
+
+<!-- val mate = Int 5 -->
+<!-- ``` -->
+<!-- # <a name="matlab"></a>MATLAB -->
