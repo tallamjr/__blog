@@ -5,7 +5,7 @@ comments: false
 
 # About Me
 
-<img class="img" src="/blog/img/profile-pic-smile-square-crop.jpg" style="float: right;margin: 0px 0px 10px 15px;">
+<img class="img" src="/blog/img/about/profile-pic-smile-square-crop.jpg" style="float: right;margin: 0px 0px 10px 15px;">
 
 My name is Tarek Allam Jr,
 
