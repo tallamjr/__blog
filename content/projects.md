@@ -51,6 +51,20 @@ production system design.
 
 <!-- <embed src="http://www.astroinformatics.xyz" width="675" height="400" /> -->
 
+---
+
+##### [option3](https://github.com/tallamjr/option3)
+
+<!-- <img src="/blog/img/projects/logo_transparent.png" class="alignright" height="300" style="float: right;margin: 10px 5px 5px 0px;"> -->
+<center>
+<img src="/blog/img/projects/option3.png" class="alignright" height="300" style="float: center;margin: 0px 0px 0px 0px;">
+</center>
+
+`option3` is a proof of concept application that is being used to improve my understanding of
+Kafka and Spark for developing machine learning data pipelines. Inspired by Stephane Maarek's [Kafka
+for Beginners](https://www.linkedin.com/learning/learn-apache-kafka-for-beginners) course, I hope to
+connect to the Twitter stream of tweets, apply some filtering and transformations, and finally
+visualise, in real-time, the processed data.
 
 <br>
 
