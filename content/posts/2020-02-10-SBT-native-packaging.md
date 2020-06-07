@@ -251,7 +251,7 @@ addition to standard scripts like the one above, one can also [create other form
 
 For more check out the great documentation [here](https://www.scala-sbt.org/sbt-native-packager/index.html)
 
-All the code for this post is available on [Github](https://www.github.com/tallamjr/blog/code/posts/)
+All the code for this post is available on [Github](https://github.com/tallamjr/blog/tree/master/code/posts)
 
 <!-- {{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}} -->
 
