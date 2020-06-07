@@ -52,5 +52,6 @@ recommend looking into for a more complete list.
 * [REA Group Tech Blog](http://rea.tech/)
 * [Databricks Engineering](https://databricks.com/blog/category/engineering)
 * [NVIDIA Developer Blog](https://devblogs.nvidia.com/)
+* [Confluent Blog](https://www.confluent.io/blog)
 
 Enjoy!
