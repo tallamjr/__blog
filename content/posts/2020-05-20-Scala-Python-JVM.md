@@ -18,7 +18,9 @@ Interoperability between Java and Scala is a no briner since Scala compiles down
 but call Scala from Python is a little more involved, but the process is very simple.
 
 The code used in this post builds upon the code used in a previous post and has the standard maven
-directory layout. We will be calling `simple.SimpleApp.hello()` function to print `"Hello, World!"`.
+directory layout. To have a closer look, it can be found under `code/posts/2020-05-20-Scala-Python-JVM`
+
+We will be calling `simple.SimpleApp.hello()` function to print `"Hello, World!"`.
 
 
 The simple Scala we will use is the following:
@@ -118,4 +120,3 @@ Hello, Wolrd!
 # References
 
 This post was inspired by Alexis Seigneurin's much more detailed post [Spark - Calling Scala code from PySpark](https://aseigneurin.github.io/2016/09/01/spark-calling-scala-code-from-pyspark.html) which I highly recommend reading.
-
