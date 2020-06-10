@@ -70,6 +70,10 @@ visualise, in real-time, the processed data.
 
 ---
 
-Follow me on [Github](https://www.github.com/tallamjr/) and check out more of my projects:
+Follow me on [Github](https://www.github.com/tallamjr/) and check out more of my projects.
 
-{{< figure src="/blog/img/projects/contributions.png" style="float: right;margin: 0px 0px 10px 15px;">}}
+{{< projects >}}
+
+<br>
+
+.

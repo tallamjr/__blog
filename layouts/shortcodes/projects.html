@@ -1,0 +1,15 @@
+{{- $style := "auto" -}}
+{{- if and (isset site.Params "style") (ne site.Params.style "") -}}
+{{- $style = site.Params.style | lower -}}
+{{- end -}}
+
+{{- if ne $style "light" -}}
+    {{- $darkStyle := resources.Get "css/dark-style.css" -}}
+    {{- if $darkStyle -}}
+    {{- if eq $style "dark" -}}
+        <img src="/blog/img/projects/contributions-dark.png" style="float: right;margin: 0px 0px 10px 15px;">
+    {{- else -}}
+        <img src="/blog/img/projects/contributions-light.png" style="float: right;margin: 0px 0px 10px 15px;">
+{{- end -}}
+{{- end -}}
+{{- end -}}
