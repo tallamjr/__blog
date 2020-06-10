@@ -1,13 +1,38 @@
-{{ if .Type | eq "posts" }}
-    <script src="https://utteranc.es/client.js"
-            repo="tallamjr/blog"
-            issue-term="pathname"
-            label="comments"
-            theme="github-dark-orange"
-            crossorigin="anonymous"
-            async>
-    </script>
+{{- $style := "auto" -}}
+{{- if and (isset site.Params "style") (ne site.Params.style "") -}}
+{{- $style = site.Params.style | lower -}}
 {{- end -}}
+
+{{- if ne $style "light" -}}
+    {{- $darkStyle := resources.Get "css/dark-style.css" -}}
+    {{- if $darkStyle -}}
+    {{- if eq $style "dark" -}}
+        {{ if .Type | eq "posts" }}
+            <script src="https://utteranc.es/client.js"
+                    repo="tallamjr/blog"
+                    issue-term="pathname"
+                    label="comments"
+                    theme="github-dark-orange"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        {{- end -}}
+    {{- else -}}
+        {{ if .Type | eq "posts" }}
+            <script src="https://utteranc.es/client.js"
+                    repo="tallamjr/blog"
+                    issue-term="pathname"
+                    label="comments"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        {{- end -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+
 <section id="footer" class="footer">
     {{- $copyright := site.Copyright -}}
     {{- if not $copyright -}}

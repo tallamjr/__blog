@@ -1,7 +1,7 @@
 baseURL = "http://www.tarekallamjr.com/blog"
 title = "The AstroInformatic"
 theme = "hugo-notepadium"
-copyright = "©2020 Notepadium."
+copyright = "©2020 Tarek Allam Jr. [AA: Research]"
 
 languageCode = "en"  # for the RSS generation
 defaultContentLanguage = "en"
@@ -24,7 +24,7 @@ noClasses = false
 unsafe = true  # enable raw HTML in Markdown
 
 [params]
-style = "dark"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = "Jan 02, 2006"  # if unset, default is "2006-01-02"
 readingTime = true  # show reading time after article date
 logo = ""
@@ -47,8 +47,8 @@ enable = true # load math globally, default: false. You can always enable math o
 use = "katex"  # builtin: "katex", "mathjax".  default: "katex"
 
 [params.syntax]
-use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
-theme = "xcode"
+use = "hljs"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "foundation"
 darkTheme = "xcode-dark"
 
 [params.nav]
