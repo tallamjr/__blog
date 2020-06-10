@@ -49,7 +49,7 @@ use = "katex"  # builtin: "katex", "mathjax".  default: "katex"
 [params.syntax]
 use = "hljs"  # builtin: "prismjs", "hljs". "none" means Chroma
 theme = "foundation"
-darkTheme = "xcode-dark"
+darkTheme = "solarized-dark"
 
 [params.nav]
 showCategories = true       # /categories/
