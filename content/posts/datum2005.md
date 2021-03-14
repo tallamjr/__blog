@@ -59,6 +59,18 @@ There has recently been an interesting paper to evaluate the best consensus prot
 
 ### Apache Spark 3.0 on the Horizon
 
+
+#### Refs
+
+* [KIP-500: Replace ZooKeeper with a Self-Managed Metadata Quorum](https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum)
+* [KIP-595: A Raft Protocol for the Metadata Quorum](https://cwiki.apache.org/confluence/display/KAFKA/KIP-595%3A+A+Raft+Protocol+for+the+Metadata+Quorum)
+* [Paxos vs Raft: Have we reached consensus on distributed consensus?](https://arxiv.org/pdf/2004.05074.pdf)
+* [Zookeeper Atomic Broadcast Protocol (ZAB) and implementation of Zookeeper.](https://www.cloudkarafka.com/blog/2018-07-04-cloudkarafka-zab.html)k
+* [Building a Kafka that doesn’t depend on ZooKeeper](https://thehoard.blog/building-a-kafka-that-doesnt-depend-on-zookeeper-2c4701b6e961)k
+* [Apache Kafka leaves the Zoo](https://medium.com/@lukasz.antoniak/apache-kafka-leaves-the-zoo-bef529ba82b7)
+
+
+
 <!-- {{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}} -->
 
 <!-- ```python -->

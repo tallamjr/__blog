@@ -424,3 +424,6 @@ markdown such that they can be rendered into the blog with ease.
 ## References and Resources
 
 * The notebooks for this post can be found at [here](/blog/notebooks/PySpark-by-Example.html)
+* [SO:Calling Java/Scala function from a task](https://stackoverflow.com/questions/31684842/calling-java-scala-function-from-a-task)
+* [SO:Spark performance for Scala vs Python](https://stackoverflow.com/questions/32464122/spark-performance-for-scala-vs-python?noredirect=1&lq=1)
+* [PySpark Internals](https://cwiki.apache.org/confluence/display/SPARK/PySpark+Internals)

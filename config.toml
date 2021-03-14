@@ -1,7 +1,7 @@
 baseURL = "http://www.tarekallamjr.com/blog"
-title = "The AstroInformatic"
+title = "Allam Labs :: The AstroInformatic"
 theme = "hugo-notepadium"
-copyright = "©2020 Tarek Allam Jr. [AA: Research]"
+copyright = "©2020 Tarek Allam Jr. [Allam Labs.]"
 
 languageCode = "en"  # for the RSS generation
 defaultContentLanguage = "en"
@@ -27,8 +27,8 @@ unsafe = true  # enable raw HTML in Markdown
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = "Jan 02, 2006"  # if unset, default is "2006-01-02"
 readingTime = true  # show reading time after article date
-logo = ""
-slogan = "#astroinformatics"
+logo = "img/invert-allam-labs-logo.png"
+slogan = "Notes from an Astrophysicist on Informatics."
 #license = "<a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt=Creative Commons License style=border-width:0 src=https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png /></a><br />This work is licensed under a <a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>."
 
 [params.assets]
@@ -48,8 +48,8 @@ use = "katex"  # builtin: "katex", "mathjax".  default: "katex"
 
 [params.syntax]
 use = "hljs"  # builtin: "prismjs", "hljs". "none" means Chroma
-theme = "foundation"
-darkTheme = "solarized-dark"
+theme = "atom-one-dark-reasonable" # "foundation"
+darkTheme = "atom-one-dark-reasonable" # "solarized-dark"
 
 [params.nav]
 showCategories = true       # /categories/
@@ -58,6 +58,10 @@ showTags = true             # /tags/
 [[params.nav.custom]]
 title = "About"
 url = "/about/"
+
+[[params.nav.custom]]
+title = "Blog"
+url = "/"
 
 [[params.nav.custom]]
 title = "Contact"
