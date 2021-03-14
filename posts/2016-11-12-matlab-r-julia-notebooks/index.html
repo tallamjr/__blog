@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.76.5" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 
@@ -37,7 +37,7 @@
 
 
 
-<link rel="icon" href="https://lh3.googleusercontent.com/proxy/XQN2qZ7OfPdQDKr5E70HlXfIYolqvsb2YANAoe_ACDdVYqzaPDje7vCpbBCaoz0DjPLuEyUl7Ry_EXWi9SKCDWZt08gJLSedRLIIZn4CYE-HEdLCPhQEF2OcENQCaA33">
+<link rel="icon" href="/blog/assets/rocket.ico">
 
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -119,10 +119,9 @@
   z-index: 100;
 }
 
-</style><title>Multilingual Notebooks: A Polyglot&#39;s Playground&nbsp;&ndash;&nbsp;The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.9a623a89fd7657bd4c3be65508f8313b4ecd5c89a3ac7dd5dc67c771a255ff2a5f0278c20cbb275af73dc295cee93125.css" integrity="sha384-mmI6if12V71MO&#43;ZVCPgxO07NXImjrH3V3GfHcaJV/ypfAnjCDLsnWvc9wpXO6TEl"><body>
-    <div class="base-body"><section id="header" class="site header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/blog/"><span class="site name">The AstroInformatic</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/blog/about/">About</a><a class="nav item" href="/blog/contact/">Contact</a><a class="nav item" href="/blog/projects/">Projects</a><a class="nav item" href="/blog/categories/">Categories</a><a class="nav item" href="/blog/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">#astroinformatics</span></div></section><div id="content"><div class="article-container"><section class="article header">
+</style><title>Multilingual Notebooks: A Polyglot&#39;s Playground&nbsp;&ndash;&nbsp;Allam Labs :: The AstroInformatic</title><link rel="stylesheet" href="/blog/css/core.min.ba1d5ba1b3e05bd7645a704bf84b8aa8f2bb3b12a66abdae05a71df984519728f175478257de546d38d3b06c2067548c.css" integrity="sha384-uh1bobPgW9dkWnBL&#43;EuKqPK7OxKmar2uBacd&#43;YRRlyjxdUeCV95UbTjTsGwgZ1SM"><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/blog/"><img class="site logo" src="/blog/img/invert-allam-labs-logo.png" alt /><span class="site name">Allam Labs :: The AstroInformatic</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/blog/about/">About</a><a class="nav item" href="/blog/">Blog</a><a class="nav item" href="/blog/contact/">Contact</a><a class="nav item" href="/blog/projects/">Projects</a><a class="nav item" href="/blog/categories/">Categories</a><a class="nav item" href="/blog/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">Notes from an Astrophysicist on Informatics.</span></div></section><section id="content"><div class="article-container"><section class="article header">
     <h1 class="article title">Multilingual Notebooks: A Polyglot's Playground</h1><p class="article date">Nov 12, 2016<span class="reading-time"> • 6 minutes to read</span></p></section><article class="article markdown-body"><p><em>Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
 notebooks. Also discussed are some of the gotchas I encountered along the way.</em></p>
 <span class="alignright"><span class="link" ><a href="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" 
@@ -133,20 +132,26 @@ and for learning concepts through programming. It is also a great way to
 recall how you may have done something before, or solved a problem previously.</p>
 <p>I have been using Jupyter notebooks (<em>previously know as the IPython notebook</em>)
 for a while but only for use with Python 2.7 programming language. Following a
-brilliant Coursera course on <a href="https://www.coursera.org/learn/julia-programming/"target="_blank">Julia Scientific Programming</a>,
+brilliant Coursera course on <a href="https://www.coursera.org/learn/julia-programming/"target="_blank" rel="noopener noreferrer">Julia Scientific Programming</a>
+,
 I discovered that there has been a push to make these notebooks agnostic to
 language. There are several kernels available at the moment for a multitude of languages
-including Julia, R, Ruby and so on, a full list of which can be found <a href="https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages"target="_blank">here</a>.
+including Julia, R, Ruby and so on, a full list of which can be found <a href="https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages"target="_blank" rel="noopener noreferrer">here</a>
+.
 This post will talk though the steps involved to install the MATLAB, R and Julia kernels.</p>
 <ul>
-<li><a href="#matlab">MATLAB</a></li>
-<li><a href="#r">R</a></li>
-<li><a href="#julia">Julia</a></li>
+<li><a href="#matlab">MATLAB</a>
+</li>
+<li><a href="#r">R</a>
+</li>
+<li><a href="#julia">Julia</a>
+</li>
 </ul>
 <h1 id="a-namematlabamatlab"><a name="matlab"></a>MATLAB</h1>
 <p>MATLAB (matrix laboratory) is ubiquitous in the world of scientific computing and is a many
 engineering and physics students only connection to programming. The brilliant
-abstraction away from the low-level implementation of <a href="https://en.wikipedia.org/wiki/LAPACK"target="_blank">LAPACK</a> under the hood with
+abstraction away from the low-level implementation of <a href="https://en.wikipedia.org/wiki/LAPACK"target="_blank" rel="noopener noreferrer">LAPACK</a>
+ under the hood with
 a nice high level interface make MATLAB a very powerful and useful tool. Combine
 that with the Jupyter notebook and we now have a way of expressing complex
 mathematical concepts and doing compute numerical methods in an easy to read
@@ -156,14 +161,17 @@ is propriety software from the mathworks company but if you are affiliated with 
 university a license should be easy to come by. After the binary is installed,
 one needs to install the MATLAB engine for Python, instructions for downloading
 can be found
-<a href="http://uk.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html"target="_blank">here</a>.
-The system requirements for these installs can be found <a href="http://uk.mathworks.com/help/matlab/matlab_external/system-requirements-for-matlab-engine-for-python.html"target="_blank">here</a>,
+<a href="http://uk.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html"target="_blank" rel="noopener noreferrer">here</a>
+.
+The system requirements for these installs can be found <a href="http://uk.mathworks.com/help/matlab/matlab_external/system-requirements-for-matlab-engine-for-python.html"target="_blank" rel="noopener noreferrer">here</a>
+,
 however, on the system requirement website, it states Python 3.5 is supported,
 but I found this not to be the case (<em>14-11-2016</em>) as I encountered the following error under a 3.5 environment:</p>
 <pre><code class="language-less" data-lang="less">OSError: MATLAB Engine for Python supports Python version 2.7, 3.3 and 3.4, \
 but your version of Python is 3.5
 </code></pre><p>Therefore, it was decided to create a new environment to play it safe under
-Python 3.4 using <a href="https://www.continuum.io/downloads"target="_blank">conda</a> like so;</p>
+Python 3.4 using <a href="https://www.continuum.io/downloads"target="_blank" rel="noopener noreferrer">conda</a>
+ like so;</p>
 <pre><code class="language-less" data-lang="less">conda create -n py34 python=3.4 anaconda
 source activate p34
 </code></pre><p>Then, open up MATLAB and type in:</p>
@@ -176,7 +184,8 @@ pip install jupyter
 pip install pymatbridge
 pip install matlab_kernel
 python -m matlab_kernel install
-</code></pre></div><p>One may encounter the following <a href="https://github.com/jupyter/notebook/issues/297"target="_blank">error</a>,
+</code></pre></div><p>One may encounter the following <a href="https://github.com/jupyter/notebook/issues/297"target="_blank" rel="noopener noreferrer">error</a>
+,
 this can be resolved by doing the following:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">conda remove pyzmq <span class="o">&amp;&amp;</span> pip install pyzmq
 </code></pre></div><p>Once all of these steps have been completed, you should be able to start a new
@@ -199,7 +208,8 @@ concept is one that has influences many other modern languages (Pandas - Python,
 DataFrames - Julia etc).</p>
 <p>The R kernel is fairly simple to download and install via <strong>conda</strong> package
 manager, and I would recommend going through this useful
-<a href="https://www.continuum.io/blog/developer/jupyter-and-conda-r"target="_blank">article</a>.
+<a href="https://www.continuum.io/blog/developer/jupyter-and-conda-r"target="_blank" rel="noopener noreferrer">article</a>
+.
 Unfortunately I discovered that article after the fact, which meant I had to jump
 over a few hurdles in attempting to get things working on my machine. I will go
 through the steps I took installing without using <strong>conda</strong> package manager as it
@@ -208,7 +218,8 @@ the definitely follow the article I have listed above.</p>
 <p>Since I
 already has <strong>R</strong> installed on my machine, I didn&rsquo;t feel it necessary to
 re-download <strong>r-essntials</strong> from <strong>conda</strong> so I followed the instructions on the
-<a href="https://github.com/IRkernel/IRkernel"target="_blank">IRKernel GitHub readme</a> which instructed
+<a href="https://github.com/IRkernel/IRkernel"target="_blank" rel="noopener noreferrer">IRKernel GitHub readme</a>
+ which instructed
 me to install the relevant dev tools from within <code>R</code> like so:</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;repr&#39;</span><span class="p">,</span> <span class="s">&#39;IRdisplay&#39;</span><span class="p">,</span> <span class="s">&#39;crayon&#39;</span><span class="p">,</span> <span class="s">&#39;pbdZMQ&#39;</span><span class="p">,</span> <span class="s">&#39;devtools&#39;</span><span class="p">))</span>
 <span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#39;IRkernel/IRkernel&#39;</span><span class="p">)</span>
@@ -217,7 +228,8 @@ me to install the relevant dev tools from within <code>R</code> like so:</p>
 <pre><code class="language-less" data-lang="less">Error in curl::curl_fetch_memory(url, handle = handle) :
 Peer certificate cannot be authenticated with given CA certificates
 </code></pre><p>According to
-<a href="http://stackoverflow.com/questions/31293325/r-install-github-fails"target="_blank">stackoverflow</a>
+<a href="http://stackoverflow.com/questions/31293325/r-install-github-fails"target="_blank" rel="noopener noreferrer">stackoverflow</a>
+
 this can be easily resolved by setting;</p>
 <div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">httr</span><span class="p">)</span>
 <span class="nf">set_config</span><span class="p">(</span> <span class="nf">config</span><span class="p">(</span> <span class="n">ssl_verifypeer</span> <span class="o">=</span> <span class="m">0L</span> <span class="p">)</span> <span class="p">)</span>
@@ -232,12 +244,14 @@ dyld: Library not loaded: @rpath/libpcre.1.dylib
   Reason: image not found
 Trace/BPT trap: <span class="m">5</span>
 </code></pre></div><p>This is another issue that can be resolved by looking at this
-<a href="http://stackoverflow.com/questions/38467653/r-is-broken-with-dyld-library-not-loaded-rpath-libpcre-1-dylib"target="_blank">SO</a>
+<a href="http://stackoverflow.com/questions/38467653/r-is-broken-with-dyld-library-not-loaded-rpath-libpcre-1-dylib"target="_blank" rel="noopener noreferrer">SO</a>
+
 post.</p>
 <p>I was able to search for the <em>libpcre.1.dylib</em> file by using the brilliant
 <strong>find</strong> command like so:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">find / -iname <span class="s2">&#34;libpcre.1.dylib&#34;</span>
-</code></pre></div><p>Alternatively one can use <a href="https://github.com/junegunn/fzf"target="_blank"><em>fzf</em></a> fuzzy finder
+</code></pre></div><p>Alternatively one can use <a href="https://github.com/junegunn/fzf"target="_blank" rel="noopener noreferrer"><em>fzf</em></a>
+ fuzzy finder
 by changing directory to <strong>/</strong> and running <strong>fzf</strong>. Once inside the program,
 simply type: <strong>libpcre.1.dylib</strong> and it
 should search for you (this may take a while)</p>
@@ -258,10 +272,12 @@ notebooks.</p>
 <h1 id="a-namejuliaajulia"><a name="julia"></a>Julia</h1>
 <p>Julia is a relatively new programming language designed to be a modern scientific
 programming language for the 21st century.</p>
-<p><a href="http://lectures.quantecon.org/jl/getting_started.html"target="_blank">Here</a> is a good guide to
+<p><a href="http://lectures.quantecon.org/jl/getting_started.html"target="_blank" rel="noopener noreferrer">Here</a>
+ is a good guide to
 get up and running quickly.</p>
 <p>Julia was definitely the easiest out of the three kernels mentioned here. All
-that is required is a Julia to be <a href="http://julialang.org/downloads/"target="_blank">downloaded</a>
+that is required is a Julia to be <a href="http://julialang.org/downloads/"target="_blank" rel="noopener noreferrer">downloaded</a>
+
 at version 0.4 or greater on your laptop and to run the
 following commands from within Julia:</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;IJulia&#34;</span><span class="p">)</span>
@@ -269,12 +285,14 @@ following commands from within Julia:</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">using</span> <span class="n">IJulia</span>
 <span class="n">notebook</span><span class="p">()</span>
 </code></pre></div><p>will open up a new tab in your default browser.</p>
-<p>There were a few gotcha I did encounter, the main one being <a href="https://github.com/tbreloff/Plots.jl/issues/258"target="_blank">trouble with several
-plotting packages</a> with
+<p>There were a few gotcha I did encounter, the main one being <a href="https://github.com/tbreloff/Plots.jl/issues/258"target="_blank" rel="noopener noreferrer">trouble with several
+plotting packages</a>
+ with
 Julia.0.5.0 (14-11-2016). I reverted back to Julia 0.4.6
 and everything seems to work. I am sure this is only a temporally issue and will be
 resolved soon.</p>
-<p>Another hiccup once might have may relate to this <a href="https://github.com/jupyter/notebook/issues/297"target="_blank">issue</a> of the kernel failing to
+<p>Another hiccup once might have may relate to this <a href="https://github.com/jupyter/notebook/issues/297"target="_blank" rel="noopener noreferrer">issue</a>
+ of the kernel failing to
 start (Note, this is the same issue mentioned above for the MATLAB kernel)</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">conda remove pyzmq
 pip install pyzmq
@@ -285,13 +303,19 @@ pip install pyzmq
 <h2 id="final-comments">Final Comments.</h2>
 <p>I have focused on installing the kernels I felt most useful for <em>Scientific
 Computing</em>, however a list of other kernels can be found
-<a href="https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages"target="_blank">here</a>. Jupyter
+<a href="https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages"target="_blank" rel="noopener noreferrer">here</a>
+. Jupyter
 project is doing wonders in helping many people learn programming and also the
 research community with sharing code and methodology. I hope this can continue and
 if you have read this and also think it&rsquo;s awesome, you can find out more on
-their <a href="http://jupyter.org/"target="_blank">website</a>. Since Jupyter is an open source project
-you can always contribute on <a href="https://github.com/JuliaLang/julia"target="_blank">GitHub</a>, or in
-other ways through <a href="http://jupyter.org/donate.html"target="_blank">donations!</a></p></article><section class="article labels"><a class="tag" href=/blog/tags/reproducibility/>reproducibility</a><a class="tag" href=/blog/tags/programming/>programming</a></section></div><section class="article navigation"><p><a class="link" href="/blog/posts/2020-02-10-sbt-native-packaging/"><span class="li">&larr;</span>Packaging Scala Applications</a></p></section></div>
+their <a href="http://jupyter.org/"target="_blank" rel="noopener noreferrer">website</a>
+. Since Jupyter is an open source project
+you can always contribute on <a href="https://github.com/JuliaLang/julia"target="_blank" rel="noopener noreferrer">GitHub</a>
+, or in
+other ways through <a href="http://jupyter.org/donate.html"target="_blank" rel="noopener noreferrer">donations!</a>
+</p></article><section class="article labels"><a class="tag" href=/blog/tags/reproducibility/>reproducibility</a><a class="tag" href=/blog/tags/programming/>programming</a></section>
+</div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/blog/posts/2020-02-10-sbt-native-packaging/"><span class="iconfont icon-article"></span>Packaging Scala Applications</a></p></section></div></section>
             <script src="https://utteranc.es/client.js"
                     repo="tallamjr/blog"
                     issue-term="pathname"
@@ -300,11 +324,11 @@ other ways through <a href="http://jupyter.org/donate.html"target="_blank">donat
                     crossorigin="anonymous"
                     async>
             </script><section id="footer" class="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Tarek Allam Jr. [AA: Research]</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/&#43;DiW/UqRcLbRjq" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l&#43;B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd&#43;qj&#43;o24G5ZU2zJz" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    <p class="copyright">©2020 Tarek Allam Jr. [Allam Labs.]</p>
+    <p class="powerby"><span>Powered&nbsp;by&nbsp;</span><a href="https://gohugo.io" 
+        target="_blank" rel="noopener noreferrer">Hugo</a><span>&nbsp;&amp;&nbsp;</span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank" rel="noopener noreferrer">Notepadium</a></p></div>
+</section><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/&#43;DiW/UqRcLbRjq" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l&#43;B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd&#43;qj&#43;o24G5ZU2zJz" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
             onload="renderMathInElement(document.body);"></script><script src="/blog/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
 <script type="application/javascript">
 var doNotTrack = false;
@@ -316,7 +340,6 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-</div>
 </body>
 
 </html>
