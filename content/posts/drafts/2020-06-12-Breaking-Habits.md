@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Git in the Habbit"
 author: "Tarek Allam Jr"
 date: 2020-06-12
@@ -41,19 +41,22 @@ allows me to grow.
 
 "Right, OK, yeah yeah" I hear you cry; "what was this _one_ habit" you were on about!?"
 
-# <a name="git-intro"></a>1. Dropping `-m`
+<a name="dropping-m"></a>
+# 1. Dropping `-m`
 
 Going from ~~`git commit -m`~~ to just `git commit`
 
 ## <a name="git-intro"></a>Commit Templates
 
-# <a name="git-intro"></a>2. Embrace `rebase`
+<a name="rebase"></a>
+# 2. Embrace `rebase`
 
 <center>
 <img src="https://static01.nyt.com/images/2016/08/05/us/05onfire1_xp/05onfire1_xp-articleLarge-v2.jpg?quality=75&auto=webp&disable=upscale">
 </center>
 
-# <a name="git-intro"></a>3. Branching with Purpose
+<a name="withpurpose"></a>
+# 3. Branching with Purpose
 
 * `issue/123/desc`
 * `feature/456/desc`
@@ -101,6 +104,19 @@ think about, plan ahead for code changes or updates.
 # <a name="git-intro"></a>Takeaways
 
 Rule of thumb
+
+{{< gist tallamjr 325b62b697fb39a3f1e96503a5070488 >}}
+
+
+
+<!-- <embed src="/blog/img/posts/2020-06-12-Breaking-Habits/gitflow-model-tk.pdf" width="800px" height="2100px" /> -->
+
+# References and Resources
+
+<a name="ref1"></a>
+1. [Why Linus Torvalds doesn't use Github](https://github.com/torvalds/linux/pull/17#issuecomment-5659933)
+<a name="ref2"></a>
+2. [Linus Torvalds on writing good git commit log messages](https://github.com/torvalds/subsurface/blob/a48494d2fbed58c751e9b7e8fbff88582f9b2d02/README#L88)
 <!-- {{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}} -->
 
 <!-- - [Scala and SBT Introduction](#scala) -->
