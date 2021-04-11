@@ -44,3 +44,6 @@ Expect there to be snippets from my time as a PhD student as well as discussions
 and thoughts I have had whilst being an SSI Fellow. I may also diverge into
 topics of Applied Mathematics and Computer Vision as I these are areas I am
 truly fascinated by and exited for what the future holds for such fields.
+
+<br>
+<br>
