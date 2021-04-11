@@ -5,6 +5,7 @@ author: "Tarek Allam Jr"
 date: 2020-05-27
 categories: [news]
 tags: [oss, programming]
+cover: "/img/posts/2020-05-27-Awesome-Blogs/awesome-logo-png-transparent.png"
 ---
 
 A lot of the really amazing engineering is taking place in companies, and what's great is that they

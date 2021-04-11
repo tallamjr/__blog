@@ -2,22 +2,16 @@
 title = "Multilingual Notebooks: A Polyglot's Playground"
 author = "Tarek Allam Jr"
 date = 2016-11-12
-cover = "triangle.jpg"
-[profile]
-  enable = true
-  avatar = "/img/archive/triangle.jpg"
-  name = "XXX"
-  bio = "XXX"  # support markdown syntax
-  twitter = "XXX"  # https://twitter.com/XXX
-  github = "XXX"  # https://github.com/XXX
-  docker = "XXX"  # https://hub.docker.com/u/XXX
-  email = "XXX@mail.com"  # mailto:XXX@mail.com
+cover = "/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/jupyternotebooks.png"
 +++
 
 *Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
 notebooks. Also discussed are some of the gotchas I encountered along the way.*
 
 <!--more-->
+
+<!-- {{- with .avatar -}}<img class="avatar" src="{{- . | relURL -}}" alt>{{- end -}}
+{{- with .Params.cover -}}<p><img class="cover" src="{{- . | safeURL -}}" alt></p>{{- end -}} -->
 
 {{< figure src="/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png" class="alignright">}}
 

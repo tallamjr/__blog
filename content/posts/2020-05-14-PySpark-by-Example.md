@@ -5,6 +5,7 @@ author: "Tarek Allam Jr"
 date: 2020-05-14
 categories: [tutorials]
 tags: [spark, visualisation]
+cover: "/img/posts/2020-05-14-PySpark-by-Example/pyspark.jpeg"
 ---
 
 Here are my worked examples from the very useful LinkedIn Learning course: PySpark by Example by

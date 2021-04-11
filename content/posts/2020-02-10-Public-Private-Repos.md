@@ -5,6 +5,7 @@ author: "Tarek Allam Jr"
 date: 2020-02-10
 categories: [tutorials]
 tags: [reproducibility, programming]
+cover: "/img/posts/2020-02-10-Public-Private-Repos/private.jpg"
 ---
 
 How to have an open public repository as well as a mirrored private repository on Github

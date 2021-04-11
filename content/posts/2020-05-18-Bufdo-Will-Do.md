@@ -6,6 +6,7 @@ author: "Tarek Allam Jr"
 date: 2020-05-18
 categories: [misc]
 tags: [vim, processing, unix]
+cover: "/img/posts/2020-05-18-Bufdo-Will-Do/cover.png"
 ---
 A while ago I worked on a method to allow local writing of development logs in markdown, which I
 could then upload to Github where my supervisor could take a look. Here are the steps..
@@ -13,12 +14,13 @@ could then upload to Github where my supervisor could take a look. Here are the 
 <!--more-->
 
 <!-- {{< figure src="/img/posts/2020-04-08-FINK/fink-architecture-20200206.png">}} -->
-<!-- {{< figure src="https://imgs.xkcd.com/comics/researcher_translation.png">}} -->
 <!-- Testing [cardinality](/posts/glossary#cardinality) -->
 
 # `:bufdo`
 
 *Originally authored 2017-11-06*
+
+{{< figure src="https://imgs.xkcd.com/comics/real_programmers.png">}}
 
 In true vim-fan-boy fashion, I write my development logs in `vim` and then
 like to have them render from within `vim`. To do this I use a plugin called

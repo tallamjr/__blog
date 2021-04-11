@@ -5,6 +5,7 @@ author: "Tarek Allam Jr"
 date: 2020-02-10
 category: tutorials
 tags: [reproducibility, programming]
+cover: "/img/posts/2020-02-10-SBT-native-packaging/cover.jpg"
 ---
 
 Scala compiles down to Java byte code, which can then be run on any system running the JVM. It

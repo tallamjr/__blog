@@ -5,6 +5,7 @@ author: "Tarek Allam Jr"
 date: 2020-05-20
 category: tutorials
 tags: [reproducibility, programming]
+cover: "/img/posts/2020-05-20-Scala-Python-JVM/scala-python.png"
 ---
 
 Calling compiled Scala code inside the JVM from Python using PySpark
