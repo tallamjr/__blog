@@ -36,10 +36,12 @@
       {{- $relURL = replace $relURL "." "%2e" -}}
     <li class="item"><a class="note" href="{{- $relURL -}}">
             <p class="note title">{{- .Title | safeHTML -}}</p>
+            {{- with .Params.cover -}}<p><img class="cover" src="{{- . | relURL -}}" alt></p>{{- end -}}
             {{- if .Date -}}
                 <p class="note date">{{- .Date.Format $dateFormat -}}</p>
             {{- end -}}
             {{- if .Summary -}}<p class="note content">{{- .Summary | plainify | safeHTML -}}{{- if .Truncated -}}<span class="mldr">&mldr;</span>{{- end -}}</p>{{- end -}}
+
 
             {{- $imgs := .Params.imgs -}}
             {{- with $imgs -}}
