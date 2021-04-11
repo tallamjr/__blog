@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Allam Labs :: The AstroInformatic</title>
+    <title></title>
     <link>http://www.tarekallamjr.com/blog/</link>
-    <description>Recent content on Allam Labs :: The AstroInformatic</description>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Tarek Allam Jr. [Allam Labs.]</copyright>
@@ -194,12 +194,12 @@ could then upload to Github where my supervisor could take a look. Here are the 
 &lt;!-- &lt;span class=&#34;image-container&#34;&gt;&lt;span class=&#34;link&#34; &gt;&lt;a href=&#34;http://www.tarekallamjr.com/blog/img/posts/2020-04-08-FINK/fink-architecture-20200206.png&#34; 
         target=&#34;_blank&#34;&gt;&lt;img class=&#34;img&#34; src=&#34;http://www.tarekallamjr.com/blog/img/posts/2020-04-08-FINK/fink-architecture-20200206.png&#34;/&gt;&lt;/a&gt;&lt;/span&gt;
 &lt;/span&gt; --&gt;
-&lt;!-- &lt;span class=&#34;image-container&#34;&gt;&lt;span class=&#34;link&#34; &gt;&lt;a href=&#34;https://imgs.xkcd.com/comics/researcher_translation.png&#34; 
-        target=&#34;_blank&#34;&gt;&lt;img class=&#34;img&#34; src=&#34;https://imgs.xkcd.com/comics/researcher_translation.png&#34;/&gt;&lt;/a&gt;&lt;/span&gt;
-&lt;/span&gt; --&gt;
 &lt;!-- Testing [cardinality](/posts/glossary#cardinality) --&gt;
 &lt;h1 id=&#34;bufdo&#34;&gt;&lt;code&gt;:bufdo&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Originally authored 2017-11-06&lt;/em&gt;&lt;/p&gt;
+&lt;span class=&#34;image-container&#34;&gt;&lt;span class=&#34;link&#34; &gt;&lt;a href=&#34;https://imgs.xkcd.com/comics/real_programmers.png&#34; 
+        target=&#34;_blank&#34;&gt;&lt;img class=&#34;img&#34; src=&#34;https://imgs.xkcd.com/comics/real_programmers.png&#34;/&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/span&gt;
 &lt;p&gt;In true vim-fan-boy fashion, I write my development logs in &lt;code&gt;vim&lt;/code&gt; and then
 like to have them render from within &lt;code&gt;vim&lt;/code&gt;. To do this I use a plugin called
 &lt;em&gt;InstantMarkdownPreview&lt;/em&gt;. However, the syntax used to render images using this
@@ -1090,6 +1090,8 @@ windows:packageBin - Generates an MSI
       <guid>http://www.tarekallamjr.com/blog/posts/2016-11-12-matlab-r-julia-notebooks/</guid>
       <description>&lt;p&gt;&lt;em&gt;Here I walk through the steps of installing the MATLAB, R and Julia kernels for Jupyter
 notebooks. Also discussed are some of the gotchas I encountered along the way.&lt;/em&gt;&lt;/p&gt;
+&lt;!-- {{- with .avatar -}}&lt;img class=&#34;avatar&#34; src=&#34;{{- . | relURL -}}&#34; alt&gt;{{- end -}}
+{{- with .Params.cover -}}&lt;p&gt;&lt;img class=&#34;cover&#34; src=&#34;{{- . | safeURL -}}&#34; alt&gt;&lt;/p&gt;{{- end -}} --&gt;
 &lt;span class=&#34;alignright&#34;&gt;&lt;span class=&#34;link&#34; &gt;&lt;a href=&#34;http://www.tarekallamjr.com/blog/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png&#34; 
         target=&#34;_blank&#34;&gt;&lt;img class=&#34;img&#34; src=&#34;http://www.tarekallamjr.com/blog/blog/img/posts/2016-11-12-Matlab-R-Julia-Notebooks/newprojectlist.png&#34;/&gt;&lt;/a&gt;&lt;/span&gt;
 &lt;/span&gt;
@@ -1320,6 +1322,8 @@ shall we say.&lt;/p&gt;
 and thoughts I have had whilst being an SSI Fellow. I may also diverge into
 topics of Applied Mathematics and Computer Vision as I these are areas I am
 truly fascinated by and exited for what the future holds for such fields.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
 </description>
     </item>
     

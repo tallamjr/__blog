@@ -630,6 +630,10 @@ hr {
     margin-top: 30px
 }
 
+.Cover {
+  width: 100%;
+}
+
 .post-cover {
     border: 20px solid #ffa86a;
     border: 20px solid var(--accent);
