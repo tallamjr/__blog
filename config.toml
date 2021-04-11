@@ -1,5 +1,5 @@
 baseURL = "http://www.tarekallamjr.com/blog"
-title = "Allam Labs :: The AstroInformatic"
+title = "" # "Allam Labs :: The AstroInformatic"
 theme = "hugo-notepadium"
 copyright = "©2020 Tarek Allam Jr. [Allam Labs.]"
 
@@ -27,8 +27,8 @@ unsafe = true  # enable raw HTML in Markdown
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = "Jan 02, 2006"  # if unset, default is "2006-01-02"
 readingTime = true  # show reading time after article date
-logo = "img/invert-allam-labs-logo.png"
-slogan = "Notes from an Astrophysicist on Informatics."
+logo = "img/logos/Allam-Labs-long-cut-invert-BW.png"
+slogan = "Notes from an Astrophysicist 🔭 ..turned Computer Scientist 💾 ..turned Applied ML Researcher 🤖  @UCL."
 #license = "<a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt=Creative Commons License style=border-width:0 src=https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png /></a><br />This work is licensed under a <a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>."
 
 [params.assets]
@@ -50,6 +50,16 @@ use = "katex"  # builtin: "katex", "mathjax".  default: "katex"
 use = "hljs"  # builtin: "prismjs", "hljs". "none" means Chroma
 theme = "atom-one-dark-reasonable" # "foundation"
 darkTheme = "atom-one-dark-reasonable" # "solarized-dark"
+
+[params.profile]
+  enable = true
+  avatar = "/img/archive/triangle.jpg" # "/img/avatar/Allam-Labs-long-cut-invert-BW.png"
+  # name = "Tarek Allam Jr."
+  bio = "`@tallamjr`"  # support markdown syntax
+  twitter = "https://twitter.com/tallamjr"  # https://twitter.com/XXX
+  github = "https://github.com/tallamjr"  # https://github.com/XXX
+  docker = "https://hub.docker.com/u/tallamjr"  # https://hub.docker.com/u/XXX
+  email = "t.allam.jr@gmail.com"  # mailto:XXX@mail.com
 
 [params.nav]
 showCategories = true       # /categories/
