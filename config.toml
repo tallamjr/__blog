@@ -56,9 +56,9 @@ darkTheme = "atom-one-dark-reasonable" # "solarized-dark"
   avatar = "/img/archive/triangle.jpg" # "/img/avatar/Allam-Labs-long-cut-invert-BW.png"
   # name = "Tarek Allam Jr."
   bio = "`@tallamjr`"  # support markdown syntax
-  twitter = "https://twitter.com/tallamjr"  # https://twitter.com/XXX
-  github = "https://github.com/tallamjr"  # https://github.com/XXX
-  docker = "https://hub.docker.com/u/tallamjr"  # https://hub.docker.com/u/XXX
+  twitter = "tallamjr"  # https://twitter.com/XXX
+  github = "tallamjr"  # https://github.com/XXX
+  docker = "tallamjr"  # https://hub.docker.com/u/XXX
   email = "t.allam.jr@gmail.com"  # mailto:XXX@mail.com
 
 [params.nav]
